@@ -1,498 +1,72 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>上机考试</title>
-		<style type="text/css">
-			.box{
-				width: 100%;
-				height: 100%;
-				/*background: red;*/	
-			}
-			.box .head{
-				width: 100%;
-				height: 105px;
-				background: white;
-			}
-			.head .logo{
-				width: 235px;
-				height: 65px;
-				background: blue;
-				float: left;
-				margin: 0 20px;
-				background: url(img/logo.jpg) no-repeat;
-			}
-			.head .nav{
-				width: 650px;
-				height: 65px;
-				/*background: blueviolet;*/
-				float: right;
-				margin: 0 200px;
-			}
-			.nav ul{
-				list-style: none;
-				text-align: center;
-				line-height: auto;
-			}
-			.nav li{
-				width: 75px;
-				height: 25px;
-				list-style: none;
-				float: left;
-				margin: 0 10px;
-				text-align: center;
-				line-height: 25px;
-			}
-			.nav li a{
-				text-decoration: none;
-				color: black;
-				font: 10px;
-				font-weight: bold;
-				display: block;
-			}
-			.nav li:nth-child(1):hover{
-				background: ;
-				
-			}
-			.nav li:nth-child(2):hover{
-				background: red;	
-			}
-			.nav li:nth-child(3):hover{
-				background: red;	
-			}
-			.nav li:nth-child(4):hover{
-				background: red;	
-			}
-			.nav li:nth-child(5):hover{
-				background: red;	
-			}
-			.content{
-				width: 1100px;
-				height: 2500px;
-				/*background: blue;*/
-				margin: 0 100px;
-				margin-bottom: 200px;
-			}
-			.main{
-				width: 800px;
-				height: 100%;
-				/*background: green;*/
-				float: left;
-				margin: 0 10px;
-			}
-			
-			.main .bg{
-				width:800px ;
-				height: 300px;
-				margin: 10px 0;
-				
-			}
-			.bg img{
-				width:100% ;
-				height: 100%;
-			}
-			.text1{
-				width: 100%;
-				height: 215px;
-				
-			}
-			.text1 .bg-sb{
-				width: 270px;
-				height: 200px;
-				margin: 2px 2px;
-				float: left;
-				
-			}
-			.bg-sb img{
-				width:100%;
-				height: 100%;
-			}
-			.text1 .essay{
-				width: 380px;
-				height: 200px;
-				float: left;
-				/*background: violet;*/
-				margin: 0 10px;
-			}
-			
-			.essay ul{
-				list-style: none;
-				text-align: left;
-			}
-			.essay li{
-				list-style: none;
-				
-			
-			}
-			.essay li:nth-child(1){
-				font-size: 18px;
-				font-weight: bold;
-			}
-			.essay li:nth-child(4){
-				font-size: 18px;
-				font-weight: bold;
-				margin: 10px ;
-			}
-			.essay li a{
-				display: block;
-				text-decoration: none;
-				font-size: 12px;
-				color: rgb(168,181,213);
-				float: left;
-				margin:  0 10px;	
-			}
-			.main .avd1{
-				width: 800px;
-				height: 200px;
-				/*background: hotpink;*/
-				
-			}
-			.adv1 img{
-				width: 800px;
-				height: 200px;
-			}
-			.consult{
-				width:240px;
-				height: 100%;
-				/*background: gold;*/
-				float: left;
-				margin: 0 20px;
-			}
-			.consult1{
-				width: 240px;
-				height: 85px;
-				/*background: yellowgreen;*/
-				margin: 10px 0;
-			}
-			.consult1 img{
-				width: 100%;
-				height: 85px;
-				margin: 10px 0;
-			}
-			.consult2{
-				width: 240px;
-				height: 480px;
-				/*background: darkgrey;*/
-				border: 1px solid white;
-			}
-			.consult2 p{
-				font-size: 18px;
-				font-weight: bold;
-				margin: 5px 5px;
-			}
-			.consult2 ul{
-				list-style: none;
-			}
-			.consult2 li{
-				width: 200px;
-				display: block;
-				list-style: none;
-				margin: 15px 0;
-				/*border: 1px dashed black;*/
-				border-bottom: 1px dashed black;
-				
-			}
-			.consult2 li a{
-				text-decoration: none;
-				color: gray;
-			}
-			.foot{
-				width: 100%;
-				height: 260px;
-				background: black;
-				margin-bottom: 20px;
-			}
-			.title{
-				width: 1100px;
-				height: 100px;
-				background: gray;
-				margin: 10px 30px;
-			}
-			.title ul{
-				list-style: none;
-			}
-			.title li{
-				list-style: none;
-				float: left;
-				margin: 0 10px;
-			}
-			.title li a{
-				text-decoration: none;
-				color: white;
-			}
-			.num{
-				width:1100px;
-				height: 50px;
-				margin: 100px 30px;
-			}
-			.num ul{
-				list-style: none;
-				
-			}
-			.num li{
-				list-style: none;
-				float: left;
-				margin: 0 10px;
-				color: white;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="box">
-			<div class="head">
-				<div class="logo">
-					
-				</div>
-				<div class="nav">
-					<ul>
-						<li  ><a style="color: red;"href="#">本站首页</a></li>
-						<li><a href="#">Nana主题</a></li>
-						<li><a href="#">随笔笔记</a></li>
-						<li><a href="#">技术文档</a></li>
-						<li><a href="#">手气不错</a></li>
-						<li><a style="background: rgb(192,30,34);color:white ;">搜索</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="content">
-				<div class="main">
-					<div class="bg">
-						<img src="img/banner.jpg"/>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic01.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic01.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic02.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic01.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic02.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是9折或85折的优惠，经过与老薛主机首席运营官Mars的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="adv1">
-						<img src="img/ad04.jpg"/>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic02.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic01.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic01.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic02.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="text1">
-						<div class="bg-sb">
-							<img src="img/news_pic02.jpg"/>
-						</div>
-						<div class="essay">
-							
-							<ul>
-								<li>台下一年功，台上10分钟</li>
-								<li>随笔笔记  :9小时前</li>
-								<li>老薛主机市面上大多数都是 9 折或 85 折的优惠，经过与老薛主机首席运营官 Mars 的沟通联系，终于获得老薛主机终</li>
-								<li><a href="">阅读26次</a></li>
-								<li><a href="">博主生活</a></li>
-								<li><a href="">工作生活</a></li>
-							</ul>
- 
-							
-						</div>
-					</div>
-					<div class="adv2">
-						
-					</div>
-				</div>
-				<div class="consult">
-					<div class="consult1">
-						<img src="img/ad01.jpg"/>
-					</div>
-					<div class="consult2">
-						<p>最新文章</p>
-						<ul>
-							<li><a href="#">台上一分钟台下十年功之折腾HJK集团电话交换机</a></li>
-							<li><a href="#">wordPress调用指定tag标签下的所有文章制作专题文章</a></li>
-							<li><a href="#">帝国之双面佳人第六十章</a></li>
-							<li><a href="#">wordPress新手入门教程之文章管理篇新手入门教程之文章管理篇</a></li>
-							<li><a href="#">wordPress新手入门教程之文章管理篇新手入门教程之文章管理篇</a></li>
-						</ul>
-					</div>
-					<div class="consult1">
-						<img src="img/ad01.jpg"/>
-					</div>
-					<div class="consult2">
-						<p>最新文章</p>
-						<ul>
-							<li><a href="#">台上一分钟台下十年功之折腾HJK集团电话交换机</a></li>
-							<li><a href="#">wordPress调用指定tag标签下的所有文章制作专题文章</a></li>
-							<li><a href="#">帝国之双面佳人第六十章</a></li>
-							<li><a href="#">wordPress新手入门教程之文章管理篇新手入门教程之文章管理篇</a></li>
-							<li><a href="#">wordPress新手入门教程之文章管理篇新手入门教程之文章管理篇</a></li>
-						</ul>
-					</div>
-					
-				</div>
-			</div>
-			<div class="foot">
-				<div class="title">
-					<ul>
-						<li>友情链接:</li>
-						<li><a href="#">百度</a></li>
-						<li><a href="#">博客</a></li>
-					</ul>
-				</div>
-				<div class="num">
-					<ul>
-						<li>copyright@zbpNana主题</li>
-						<li>桂ICP备1400471号</li>
-						<li>Theme by zbpNana </li>
-						<li>Powered by Z-BlogPHP</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</body>
+<body>
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+            <img class="bgc" src="./img/imgs38.jpg" width="100%" alt="">
+            <h3 class="title">欢迎来到我的个人网站</h3>
+            <h3 class="titles">今天也要加油鸭</h3>
+            <img class="icon" src="./img/down.png" alt="">
+            <div class='ribbon'>
+                <a href='./index.html'><span>Home</span></a>
+                <a href='./about.html'><span>About</span></a>
+                <a href='./form.html'><span>Form</span></a>
+
+            </div>
+
+        </div>
+        <div class="icons">
+            <div class="icons_items">
+                <img class="icons_items_imgs" src="./img/xuexiao.png" alt="">
+                <span>教学楼是我们每天必去取经之地</span>
+            </div>
+            <div class="icons_items">
+                <img class="icons_items_imgs" src="./img/canting.png" alt="">
+                <span>每天都要在食堂里面纠结到底吃什么</span>
+            </div>
+            <div class="icons_items">
+                <img class="icons_items_imgs" src="./img/fengjing.png" alt="">
+                <span>午饭过后可以躺着休息晒晒太阳的小山坡</span>
+            </div>
+            <div class="icons_items">
+                <img class="icons_items_imgs" src="./img/yewan.png" alt="">
+                <span>忙碌的一天结束啦爬上小床跟世界说晚安</span>
+            </div>
+        </div>
+        <div class="introduce">
+            <div class="introduce_item">
+                <img class="introduce_item_img" src="./img/imgs15.jpg" alt="">
+                <span class="introduce_item_title">天空还是一片浅蓝,转眼间东方出现了一道红霞,红霞慢慢地在扩大，不大一会就染红了小半边天。颜色红得可爱， 又 过了一会儿,在那个地方出现了太阳的小半边脸。</span>
+
+            </div>
+            <div class="introduce_item">
+
+                <span class="introduce_item_titles">当清晨的阳光洒进我们温馨的寝室，忙碌的一天又开始了，闹钟开始响起，每个人睡眼惺忪，从床上爬起，忙忙碌碌的穿梭在食堂与教室之间</span>
+                <img class="introduce_item_img" src="./img/imgs36.jpg" alt="">
+            </div>
+            <div class="introduce_item">
+                <img class="introduce_item_img" src="./img/imgs16.jpg" alt="">
+                <span class="introduce_item_title">温暖的阳光照耀着大地，远处的小山都金灿灿的美轮美奂，它穿梭于微隙的气息。舒倘，漫长。紫檀的香味，弥漫在春日，把天地间一切空虚盈满，阳光下，是一道纤绝的尘陌，呢喃着天真，充盈着那抹曾经深不可测的孤清而飘逸的影。</span>
+            </div>
+            <div class="introduce_item">
+                <span class="introduce_item_titles">当晚自习结束后，抬头望向天空，几颗大而亮的星星挂在夜空，仿佛是天上的人儿提着灯笼在巡视那浩瀚的太空。美丽极了，裹紧衣裳，在这优美的夜色中慢慢的走回寝室。</span>
+                <img class="introduce_item_img" src="./img/imgs14.jpg" alt="">
+            </div>
+        </div>
+        <audio autoplay="autoplay" id="audio" loop="loop">
+                <source src="./video/music.mp3" type="audio/MP3">
+               
+        </audio>
+        <img class="music_img" src="./img/music_img.png" alt="">
+    </div>
+
+</body>
+<script>
+    let mucics = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            mucics.play();
+        }, 2000);
+    }, false);
+</script>
+
 </html>
