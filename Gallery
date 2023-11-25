@@ -95,7 +95,7 @@
     margin-top: 10px; /* 上边距 */
     margin-left: 20px; /* 左边距 */   
   }
-    color: #007bff; /* 根据需要调整颜色 */
+    color: #007bff; /* 颜色 */
   }
 </style>
 <h2>
@@ -105,19 +105,18 @@
   Group Photos
 </h2>
 
-   <h2><a id="research-intro" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Group Photos</h2>
 <p>
-    <img src="groupphoto2021.png" height="500" width="200"><br>
+    <img src="groupphoto2021.png" height="500" width="400"><br>
     Group Photo_2021
 
 
 <p>
-    <img src="groupphoto2022.jpg" height="500" width="200"><br>
+    <img src="groupphoto2022.jpg" height="500" width="400"><br>
     Group Photo_2022
 
 
 <p>
-    <img src="groupphoto2023.jpg" height="500" width="200"><br>
+    <img src="groupphoto2023.jpg" height="500" width="400"><br>
     Group Photo_2023
 
     </script>
