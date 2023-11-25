@@ -78,6 +78,7 @@
         <h3><p class="view"><a href="https://zhuzibn.github.io/personal.html">Personal</a></p></h3>
 	<h3><p class="view"><a href="https://zhuzibn.github.io/labmanual.html">Labmanual</a></p></h3>
 	<h3><p class="view"><a href="https://zhuzibn.github.io/News.html">News</a></p></h3>
+        <h3><p class="view"><a href="https://zhuzibn.github.io/Gallery.html">Gallery</a></p></h3>
 <p class="view"><b>Social</b><br>
         <a href="mailto:zhifengzhu@u.nus.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
         <a href="https://scholar.google.com.sg/citations?hl=en&view_op=list_works&gmla=AJsN-F6VFqH1zWutwzwvhN4b43R06X91s_sBd1BfaiRldK2NYzR7qwy2EzPH6bkXfnrbltaK0gkxF96QNSqB4H0izNMdoUXhsQ&user=r5tFJ0YAAAAJ" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
@@ -88,80 +89,37 @@
       
 </header>
       <section>
-   <h2><a id="research-intro" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>PI</h2>
+<style>
+  h2 {
+    font-size: 28px; 
+    margin-top: 10px; /* 上边距 */
+    margin-left: 20px; /* 左边距 */   
+  }
+    color: #007bff; /* 根据需要调整颜色 */
+  }
+</style>
+<h2>
+  <a id="research-intro" class="anchor" href="#publications" aria-hidden="true">
+    <span class="octicon octicon-link"></span>
+  </a>
+  Group Photos
+</h2>
+
+   <h2><a id="research-intro" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Group Photos</h2>
 <p>
-    <img src="2020zhifeng.jpg" height="139" width="210"><br>
-    Zhifeng Zhu
-</p>
-      </section>
+    <img src="groupphoto2021.png" height="500" width="200"><br>
+    Group Photo_2021
 
-      <section>
-          <h2><a id="research-intro" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graduate Students</h2>
 
-       <p>
-          <img src="renjie.jpg" height="139" width="95"><br>
-          Jie Ren  email:renjie@shanghaitech.edu.cn
-      </p>
+<p>
+    <img src="groupphoto2022.jpg" height="500" width="200"><br>
+    Group Photo_2022
 
-      <p>
-          <img src="zhangxue.jpg" height="139" width="95"><br>
-          Xue Zhang  email:zhangxue2@shanghaitech.edu.cn
-      </p>
-	      
-      <p>
-          <img src="yuanzhengping.jpg" height="139" width="95"><br>
-           Zhengping Yuan  email:yuanzhp@shanghaitech.edu.cn
-      </p>
-	      
-      <p>
-          <img src="xuzhengde.jpg" height="139" width="95"><br>
-          Zhengde Xu  email:xuzhd@shanghaitech.edu.cn
-      </p>
-	           
-      <p>
-          <img src="xuzhuo.jpg" height="139" width="95"><br>
-           Zhuo Xu  email:xuzhuo2022@shanghaitech.edu.cn
-      </p>
-	      
-      <p>
-          <img src="qiaoyixiao.jpg" height="139" width="95"><br>
-           Yixiao Qiao  email:qiaoyx2022@shanghaitech.edu.cn
-      </p>
-	      
-      <p>
-          <img src="kongzhenhang.jpg" height="139" width="95"><br>
-           Zhenhang Kong  email:kongzhh2023@shanghaitech.edu.cn
-      </p>
-	      
-      <p>
-          <img src="zhaoboyu.jpg" height="139" width="95"><br>
-           Boyu Zhao  email:Zhaoby2023@shanghaitech.edu.cn
-      </p>
-	      
-      <h2><a id="research-intro" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alumni</h2>
-      <p>
-          Pingchuan Ma<br />  
-          Jingwei Long<br />
-          Yue Xin<br />
-          Weiyan Zhang<br />
-      </p>     
-             </section> 
 
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    <script> 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+<p>
+    <img src="groupphoto2023.jpg" height="500" width="200"><br>
+    Group Photo_2023
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
-      }
-    }
     </script>
   </body>
 </html>
