@@ -93,7 +93,7 @@
   h2 {
     font-size: 28px; 
     margin-top: 15px; /* 上边距 */
-    margin-left: 200px; /* 左边距 */   
+    margin-left: 170px; /* 左边距 */   
   }
     color: #007bff; /* 颜色 */
   }
@@ -111,7 +111,7 @@
 
 
 <p>
-    <img src="groupphoto2022.jpg" height="400" width="500"><br>
+    <img src="groupphoto2022.jpg" height="420" width="500"><br>
     Group Photo_2022
 
 
