@@ -94,7 +94,7 @@
     font-size: 28px; 
     margin-top: 15px; /* 上边距 */
     margin-left: 170px; /* 左边距 */   
-    color: #007bff; /* 颜色 */
+    color: #87CEEB; /* 淡蓝色 */
   }
 </style>
 
@@ -107,7 +107,7 @@
 
 
 <p>
-    <img src="groupphoto2021.png" height="340" width="500"><br>
+    <img src="groupphoto2021.png" height="370" width="500"><br>
     Group Photo_2021
 
 
