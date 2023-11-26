@@ -94,16 +94,17 @@
     font-size: 28px; 
     margin-top: 15px; /* 上边距 */
     margin-left: 170px; /* 左边距 */   
-  }
     color: #007bff; /* 颜色 */
   }
 </style>
+
 <h2>
   <a id="research-intro" class="anchor" href="#publications" aria-hidden="true">
     <span class="octicon octicon-link"></span>
   </a>
   Group Photos
 </h2>
+
 
 <p>
     <img src="groupphoto2021.png" height="340" width="500"><br>
