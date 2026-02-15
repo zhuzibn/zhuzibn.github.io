@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COSMAL - Research</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .chinese-text {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+    </style>
+
+    <link rel="apple-touch-icon" href="assets/img/shanghaitech.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/shanghaitech.png">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2 text-sm">
+                <div class="flex items-center space-x-4">
+                    <a class="hover:text-primary-400 transition" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
+                    <a class="hover:text-primary-400 transition" href="tel:+86-21-20684445">+86-21-20684445</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-gray-900 chinese-text">计算自旋电子</span>
+                    <span class="text-lg font-semibold text-primary-600">COSMAL</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index-modern.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+                    <a href="research-modern.html" class="text-gray-900 font-medium">Research</a>
+                    <a href="Group-modern.html" class="text-gray-600 hover:text-primary-600 transition">Group</a>
+                    <a href="News-modern.html" class="text-gray-600 hover:text-primary-600 transition">News</a>
+                    <a href="Invited-Talk-modern.html" class="text-gray-600 hover:text-primary-600 transition">Talks</a>
+                    <a href="Awards-modern.html" class="text-gray-600 hover:text-primary-600 transition">Awards</a>
+                    <a href="Teaching-modern.html" class="text-gray-600 hover:text-primary-600 transition">Teaching</a>
+                    <a href="Labmanual-modern.html" class="text-gray-600 hover:text-primary-600 transition">Labmanual</a>
+                    <a href="Gallery-modern.html" class="text-gray-600 hover:text-primary-600 transition">Gallery</a>
+                </div>
+
+                <button type="button" class="lg:hidden inline-flex items-center p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Home</a>
+                    <a href="research-modern.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-gray-50 rounded-md">Research</a>
+                    <a href="Group-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Group</a>
+                    <a href="News-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">News</a>
+                    <a href="Invited-Talk-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Talks</a>
+                    <a href="Awards-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Awards</a>
+                    <a href="Teaching-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Teaching</a>
+                    <a href="Labmanual-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Labmanual</a>
+                    <a href="Gallery-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-bold">Research Introduction</h1>
+            <p class="mt-2 text-xl text-primary-100">
+                A brief introduction of our current research can be found <a href="https://zhuzibn.github.io/research/Research_Intro_zhifeng.pdf" class="underline hover:text-primary-200 transition" target="_blank" rel="noopener">here</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Journal Papers Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-4 border-primary-500">Journal Papers</h2>
+
+            <div class="space-y-6">
+                <!-- Paper 39 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">39</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.nature.com/articles/s42005-025-02345-1" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Giant modulation of perpendicular magnetic anisotropy of Fe<sub>3</sub>GaTe<sub>2</sub> at room temperature through electric fields
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">P. Wang#, J. Gou#, Z. Xu#, Y. An#, D. Zhang*, D. Yue, K. Zhai, S. Wu, M. Gao, <b>Z. Zhu*</b>, Y. Li, W. Wang, and Y. Jiang*</p>
+                    <p class="text-gray-600 italic"><em>Commun. Phys.</em> <b>8</b>, 445 (2025)</p>
+                </div>
+
+                <!-- Paper 38 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">38</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.nature.com/articles/s41467-025-63966-2" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Layer-dependent spin-orbit torque switching of Néel vector in a van der Waals antiferromagnet
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">H. Guo, Z. Lin, J. Lu, C. Yun, G. Han, S. Sun, Y. Wu, W. Yang, D. Xiao, <b>Z. Zhu</b>, L. Peng, Y. Ye, Y. Hou, J. Yang, and Z. Luo*</p>
+                    <p class="text-gray-600 italic"><em>Nat. Commun.</em> <b>16</b>, 8911 (2025)</p>
+                </div>
+
+                <!-- Paper 37 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">37</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://doi.org/10.1103/PhysRevLett.135.126703" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Vertical Soliton-Assisted Current Switching in Extremely Thick FeGd Ferrimagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">T. Xu*,#, Z. Xu#, Y. Dong, Y. Cheng, L. Wang, H. Feng, H. Bai, K. Xu, X. Shu, P. Yu, H.-A. Zhou, E. Liu, S. He, C. Xi, G. Yu, X. Qiu, S.K. Kim, J. Zhu, <b>Z. Zhu*</b>, and W. Jiang*</p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. Lett.</em> <b>135</b>, 126703 (2025)</p>
+                </div>
+
+                <!-- Paper 36 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">36</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/apl/article/127/7/072402" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Spin-orbit torque-driven chiral domain wall motion in Mn<sub>3</sub>Sn
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Xu, Y. Zhou, X. Zhang, Y. Qiao, Z. Xu, D. Shao*, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Appl. Phys. Lett.</em> <b>127</b>, 072402 (2025)</p>
+                    <a href="https://mp.weixin.qq.com/s/fKnBJFu-0KhmstkI8Yxb4Q?scene=1&click_id=1" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 35 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">35</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/apl/article/127/2/022407" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Investigation of sub-configurations reveals stable spin–orbit torque switching polarity in polycrystalline Mn<sub>3</sub>Sn
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">B. Zhao, Z. Xu, X. Zhang, Z. Kong, S. Peng*, S. Shi*, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Appl. Phys. Lett.</em> <b>127</b>, 022407 (2025)</p>
+                    <a href="https://mp.weixin.qq.com/s/UAjolMqkHdtURTH28t4uFQ?scene=1&click_id=1" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 34 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">34</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2095927325002506" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Angle-resolved magneto-chiral anisotropy in a non-centrosymmetric atomic layer superlattice
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">L. Cheng#, M. Bao#, X. Zhang#, J. Zhang, Q. Yang, Q. Li, H. Cao, D. Qiu, H. Li, G. Cheng, H. Zhou, J. Zuo, X. Zhou, J. Shen, <b>Z. Zhu*</b>, W. Wang*, and X. Zhai*</p>
+                    <p class="text-gray-600 italic"><em>Sci. Bull.</em> <b>70</b>, 1406–1409 (2025)</p>
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3MzQ5MzQyNA==&mid=2656852038&idx=2&sn=30b1525d9fb82385782e90f27c879817&chksm=85f1dc236163122c714ab2256a1c89507b5e84a95fc10758097d6a6a96c45291fe21b022217d" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 33 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">33</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.L220409" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Van der Waals spin-orbit torque antiferromagnetic memory
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">L. Zhang#, Z. Yuan#, J. Yang, J. Zhou, Y. Jiang, H. Li, Y. Cai, E.Y. Tsymbal, Y.P. Feng*, <b>Z. Zhu*</b>, and L. Shen*</p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. B.</em> <b>110</b>, L220409 (2024)</p>
+                </div>
+
+                <!-- Paper 32 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">32</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.184428" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Revisiting analytical solution of spin-orbit torque switched nanoscale perpendicular ferromagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. B.</em> <b>110</b>, 184428 (2024)</p>
+                </div>
+
+                <!-- Paper 31 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">31</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304885324009053" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Anomalous switching pattern in ferrimagnetic memory cell
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Xu, Z. Yuan, X. Zhang, Z. Xu, Y. Qiao, Y. Yang, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>J. Magn. Magn. Mater.</em> 172614 (2024)</p>
+                </div>
+
+                <!-- Paper 30 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">30</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/apl/article-abstract/125/18/182403" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Orthogonal spin–orbit torque-induced deterministic switching in NiO
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Y. Qiao, Z. Xu, Z. Xu, Y. Yang, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Appl. Phys. Lett.</em> <b>125</b>, 182403 (2024)</p>
+                    <a href="https://mp.weixin.qq.com/s/kjVd4ktVpwYqP7NKMa9UQg" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 29 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">29</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="http://engine.scichina.com/doi/10.1360/TB-2024-0879" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Implementing batch normalization-like algorithm with a single spintronic neuron
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Xu#, Y. Xin#, Z. Yuan, K. Zhou, Y. Yang, S. Gao, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Chinese Science Bulletin</em> (2024)</p>
+                    <a href="https://mp.weixin.qq.com/s/3WWBXmxStg0S-X4gtMxzcw" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 28 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">28</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.acs.org/doi/10.1021/acsnano.4c03278" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Integrated Artificial Neural Network with Trainable Activation Function Enabled by Topological Insulator-Based Spin–Orbit Torque Devices
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">P. Huang, X. Liu, Y. Xin, Y. Gu, A. Lee, Y. Zhang, Z. Xu, P. Chen, Y. Zhang, W. Deng, G. Yu, D. Wu, Z. Liu, Q. Yao, Y. Yang, <b>Z. Zhu*</b>, and X. Kou*</p>
+                    <p class="text-gray-600 italic"><em>ACS Nano</em> 4c03278 (2024)</p>
+                    <a href="https://mp.weixin.qq.com/s/sF-xQWuis_q2x1-xR3gl7w" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 27 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">27</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://onlinelibrary.wiley.com/doi/10.1002/smll.202403073" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Highly Efficient Spin Injection and Readout Across Van Der Waals Interface
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">H. Chen, W. Tian, L. Zhang, P. Song*, L. Jia, J. Chen, <b>Z. Zhu</b>, Y.P. Feng, K.P. Loh*</p>
+                    <p class="text-gray-600 italic"><em>Small</em> 2403073 (2024)</p>
+                </div>
+
+                <!-- Paper 26 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">26</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.184426" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Non-Hermitian spin dynamics in a coupled ferrimagnetic system
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">X. Zhang, C. Liu, <b>Z. Zhu*</b>, Y. Zhang*</p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. B</em> <b>109</b>, 184426 (2024)</p>
+                </div>
+
+                <!-- Paper 25 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">25</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.109.134433" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Deterministic spin-orbit torque switching including interplay between spin polarization and kagome plane in Mn<sub>3</sub>Sn
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Xu, X. Zhang, Y. Qiao, G. Liang, S. Shi*, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. B </em> <b>109</b>, 134433 (2024)</p>
+                    <p class="text-gray-600 italic text-sm">arXiv:<b>2308.08091.</b> (2023)</p>
+                </div>
+
+                <!-- Paper 24 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">24</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.nature.com/articles/s42005-024-01580-2" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Tunable and inhomogeneous current-induced THz-oscillation dynamics in ferrimagnetic spin-chain
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">B. Cai, X. Zhang, <b>Z. Zhu</b>, G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Commun. Phys.</em> <b>7</b>, 94 (2024)</p>
+                </div>
+
+                <!-- Paper 23 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">23</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/apl/article-abstract/124/1/012405" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Spin-transfer-torque induced spatially nonuniform switching in ferrimagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, J. Ren, Y. Qiao, W. Fan*, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Appl. Phys. Lett.</em> <b>124</b>, 012405 (2024)</p>
+                    <a href="https://mp.weixin.qq.com/s/AOjn3MRN9uhMD_-X9a0RAw" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 22 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">22</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://arxiv.org/abs/2303.08378" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Efficient domain wall motion driven by out-of-plane spin polarization
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">J. Long, Y. Yang, S. Shi, X. Feng, G. Liang, <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>arXiv:</em><b>2303.08378</b> (2023)</p>
+                </div>
+
+                <!-- Paper 21 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">21</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2666386423002473?via%3Dihub" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Room temperature field-free switching of CoFeB/MgO heterostructure based on large-scale few-layer WTe<sub>2</sub>
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">X. Wang, H. Wu, R. Qiu, X. Huang, J. Zhang, J. Long, Y. Yao, Y. Zhao, <b>Z. Zhu</b>, J. Wang, S. Shi*, H. Chang*, W. Zhao*</p>
+                    <p class="text-gray-600 italic"><em>Cell Rep. Phys. Sci. </em><b>101468</b> (2023)</p>
+                </div>
+
+                <!-- Paper 20 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">20</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/jap/article/133/15/153904" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Field-Free Spin–Orbit Torque Switching of an Antiferromagnet with Perpendicular Néel Vector
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Xu, J. Ren, Z. Yuan, Y. Xin, X. Zhang, S. Shi, Y. Yang, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>J. Appl. Phys.</em> <b>133</b>, 153904 (2023)</p>
+                    <a href="https://mp.weixin.qq.com/s/NddiqR1XF7dd0Z4-mOxqsg" class="text-sm text-blue-600 hover:text-blue-700 transition" target="_blank" rel="noopener">[News Coverage]</a>
+                </div>
+
+                <!-- Paper 19 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">19</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://pubs.aip.org/aip/jap/article/133/15/153903" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Anomalous Impact of Thermal Fluctuations on Spin Transfer Torque Induced Ferrimagnetic Switching
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Yuan, J. Long, Y. Xin, Z. Xu, L. An, J. Ren, X. Zhang, Y. Yang, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>J. Appl. Phys. </em><b>133</b>, 153903 (2023)</p>
+                </div>
+
+                <!-- Paper 18 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">18</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.184419" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Temperature-insensitive reading of a flash memory cell
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">W. Zhang, T. Yu, <b>Z. Zhu</b>, and B. Li*</p>
+                    <p class="text-gray-600 italic"><em>J. Semicond. <b>44</b>, 044102</em>, (2023)</p>
+                </div>
+
+                <!-- Paper 17 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">17</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://link.springer.com/article/10.1007/s00339-022-06365-4" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Unconventional computing based on magnetic tunnel junction
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">B. Cai, Y. He, Y. Xin, Z. Yuan, X. Zhang, <b>Z. Zhu*</b>, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Appl. Phys. A </em> <b>129</b>, 236 (2023) Editor's Choice</p>
+                </div>
+
+                <!-- Paper 16 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">16</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.mdpi.com/2079-4991/13/2/337" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Comparative Study of Temperature Impact in Spin-Torque Switched Perpendicular and Easy-Cone MTJs
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">J. Long, Q. Hu, Z. Yuan, Y. Zhang, Y. Xin, J. Ren, B. Dong, G. Li, Y. Yang, H. Li*, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Nanomaterials </em><b>13</b>, 337 (2023)</p>
+                </div>
+
+                <!-- Paper 15 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">15</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.mdpi.com/2079-4991/13/2/337" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Magnetic Field-Oriented Electrical Transport Properties in Antiperovskite Mn<sub>3</sub>SnC
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">P. Wu*, J. Yan*, P. Liang, <b>Z. Zhu*</b> and T. Wu*</p>
+                    <p class="text-gray-600 italic"><em>Phys. Status Solidi RRL </em><b>2100614</b>, (2022)</p>
+                </div>
+
+                <!-- Paper 14 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">14</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://arxiv.org/abs/2211.13391" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Electrical Tunable Spintronic Neuron with Trainable Activation Function
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Y. Xin, K. Zhou, X. Feng, Y. Yang, S. Gao, Z. Zhu*</p>
+                    <p class="text-gray-600 italic"><em>arXiv:</em><b>2211.13391</b> (2022)</p>
+                </div>
+
+                <!-- Paper 13 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">13</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.106.184419" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Spatially nonuniform oscillations in ferrimagnets based on an atomistic model
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">X. Zhang, B. Cai, J. Ren, Z. Yuan, Z. Xu, Y. Yang, G. Liang*, and <b>Z. Zhu*</b></p>
+                    <p class="text-gray-600 italic"><em>Phys. Rev. B</em> <b>106</b>, 184419 (2022)</p>
+                </div>
+
+                <!-- Paper 12 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">12</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://link.springer.com/article/10.1007/s10854-022-08491-4" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Magnetodynamic properties on square patterned of FeGaB and Al<sub>2</sub>O<sub>3</sub>/FeGaB thin films
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">K. Yadagiri*, J. Long, Y. Wang, <b>Z. Zhu</b>, and T. Wu</p>
+                    <p class="text-gray-600 italic"><em>J Mater Sci: Mater Electron</em>, 15927–15935 (2022)</p>
+                </div>
+
+                <!-- Paper 11 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">11</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://ieeexplore.ieee.org/document/9675835" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Optimal Spin Polarization for Spin-Orbit-Torque Memory and Oscillator
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Fu, A.K. Shukla, Z. Mu, K. Lu, Y. Dong, Z. Luo, X. Qiu, <b>Z. Zhu*</b>, and Y. Yang*</p>
+                    <p class="text-gray-600 italic"><em>IEEE Transactions on Electron Devices</em>, 1557-1564 (2022)</p>
+                </div>
+
+                <!-- Paper 10 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">10</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.frontiersin.org/articles/10.3389/fphy.2021.638207/full" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            An Overview of Spintronic True Random Number Generator
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">Z. Fu, Y. Tang, X. Zhao, K. Lu, Y. Dong, A. Shukla, <b>Z. Zhu</b>, and Y. Yang*</p>
+                    <p class="text-gray-600 italic"><em>Frontiers in Physics</em> <b>9</b>, 172 (2021)</p>
+                </div>
+
+                <!-- Paper 9 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">9</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9097260" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Voltage-Controlled Spintronic Stochastic Neuron for Restricted Boltzmann Machine with Weight Sparsity
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">J. Deng*, V.P.K. Miriyala, <b>Z. Zhu</b>, X. Feng, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>IEEE Electron Devices Lett., <b>41</b>, 7 (2020)</p>
+                </div>
+
+                <!-- Paper 8 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">8</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.13.034040" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Electrical generation and detection of terahertz signal based on spin-wave emission from ferrimagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>Z. Zhu*</b>, K. Cai, J. Deng, V.P.K. Miriyala, H. Yang, X. Feng, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Physical Review Applied</em> <b>13</b>, 034040 (2020)</p>
+                </div>
+
+                <!-- Paper 7 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">7</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.nature.com/articles/s41928-019-0345-8" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Ultrafast and energy-efficient spin–orbit torque switching in compensated ferrimagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">K. Cai, <b>Z. Zhu</b>, J.M. Lee, R. Mishra, L. Ren, S.D. Peppard, P. He, G. Liang, K.L. Teo, and H. Yang*</p>
+                    <p class="text-gray-600 italic"><em>Nature Electronics</em> <b>3</b>, 37 (2020)</p>
+                </div>
+
+                <!-- Paper 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">6</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.nature.com/articles/s41565-019-0525-8" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            All-electric magnetization switching and Dzyaloshinskii-Moriya interaction in WTe<sub>2</sub>/ferromagnet heterostructures
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">S. Shi, S. Liang, <b>Z. Zhu</b>, K. Cai, S.D. Peppard, Y. Wang, J. Wang, Q. Wang, P. He, J. Yu, G. Eda, G. Liang, and H. Yang*</p>
+                    <p class="text-gray-600 italic"><em>Nature Nanotechnology</em> <b>14</b>, 945 (2019)</p>
+                </div>
+
+                <!-- Paper 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">5</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://aip.scitation.org/doi/abs/10.1063/1.5092881" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Voltage-input spintronic oscillator based on competing effects for large output power
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>Z. Zhu*</b>, J. Deng, X. Feng, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Journal of Applied Physics</em> <b>125</b>, 183902 (2019)</p>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">4</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304885319306675" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Spin-wave mediated interactions for Majority Logic Computation using Skyrmions and Spin-torque Nano-oscillators
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">V.P.K. Miriyala, <b>Z. Zhu</b>, G. Liang, X. Feng</p>
+                    <p class="text-gray-600 italic"><em>Journal of Magnetism and Magnetic Materials</em> <b>486</b>, 165271 (2019)</p>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">3</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://aip.scitation.org/doi/10.1063/1.5048040" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Damping-like spin-orbit-torque-induced magnetization dynamics in ferrimagnets based on Landau-Lifshitz-Bloch equation
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>Z. Zhu*</b>, X. Feng, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Journal of Applied Physics</em> <b>124</b>, 193901 (2018)</p>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">2</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.97.184410" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Theoretical Proposal for Determining Angular Momentum Compensation in Ferrimagnets
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>Z. Zhu*</b>, X. Feng, and G. Liang*</p>
+                    <p class="text-gray-600 italic"><em>Physical Review B</em> <b>97</b>, 184410, (2018)</p>
+                </div>
+
+                <!-- Paper 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">1</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://arxiv.org/abs/1611.05169" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            Switching based Spin Transfer Torque Oscillator with zero-bias field and large tuning-ratio
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1">G. Gupta*, <b>Z. Zhu</b>, G. Liang</p>
+                    <p class="text-gray-600 italic">arXiv:1611.05169, (2017)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conference Papers Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-4 border-primary-500">Conference Papers</h2>
+
+            <div class="space-y-6">
+                <!-- Conference 31 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">31</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">A Cache-Compatible 4T2MTJ MRAM Enabling Compute-in-Memory Adders</p>
+                    <p class="text-gray-700 mb-1">Z. Xu#, X. Zhang#, D. Chen#, X. Zhang, X. Feng, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials, (Hyogo, Japan, September 1-September 4, 2025)</p>
+                </div>
+
+                <!-- Conference 30 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">30</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">A 2-Bit 4T2MTJ MRAM Bit-Cell for Compute-in-Memory Applications</p>
+                    <p class="text-gray-700 mb-1">Z. Xu, W. Zhang, J. Wang, X. Zhang, Y. Cen, X. Zhang, X. Feng*, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International VLSI Symposium on Technology, Systems and Applications (2025 VLSI TSA), (Taiwan, China, December 21-24, 2025)</p>
+                </div>
+
+                <!-- Conference 29 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">29</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Spin-Orbit Torque Induced Spatial Asymmetric Switching in Ferrimagnets</p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">9th IEEE Electron Devices Technology and Manufacturing Conference (IEEE EDTM 2025), (Hong Kong, China, March 9-12, 2025)</p>
+                </div>
+
+                <!-- Conference 28 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">28</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">自旋轨道力矩驱动的纳米尺寸垂直铁磁翻转研究</p>
+                    <p class="text-gray-700 mb-1 chinese-text">（邀请报告）张雪，徐正德，<b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">第十三届全国磁性薄膜与纳米磁学会议, (厦门, 中国, Dec. 12-Dec. 15, 2024)</p>
+                </div>
+
+                <!-- Conference 27 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">27</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">基于正交自旋轨道力矩引发的NiO确定性翻转</p>
+                    <p class="text-gray-700 mb-1 chinese-text">乔怡骁，徐正德，许焯，<b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">第十三届全国磁性薄膜与纳米磁学会议, (厦门, 中国, Dec. 12-Dec. 15, 2024), Poster</p>
+                </div>
+
+                <!-- Conference 26 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">26</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Spin-Orbit Torque Switching of Mn<sub>3</sub>Sn with Rotated Kagome Plane</p>
+                    <p class="text-gray-700 mb-1">B. Zhao#, Z. Xu#, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">5th International Workshop on Spintronic Memory and Logic (SML), (Hangzhou, China, Oct. 16-18, 2024), Poster</p>
+                </div>
+
+                <!-- Conference 25 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">25</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Chirality Reversal Related Spin-Orbit Torque Switching in Nanoscale Perpendicular Ferromagnet</p>
+                    <p class="text-gray-700 mb-1">Z. Kong#, Z. Xu#, X. Zhang#, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials, (Hyogo, Japan, September 1-September 4, 2024)</p>
+                </div>
+
+                <!-- Conference 24 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">24</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Vortex Motion Mediated Back-and-Forth Magnetization Switching in Ferrimagnets</p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Magnetism 2024, (Bologna, Italy, June 30-July 5, 2024)</p>
+                </div>
+
+                <!-- Conference 23 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">23</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Spin-Orbit Torque Switching of Mn<sub>3</sub>Sn with Spin Polarization Perpendicular to Kagome Plane</p>
+                    <p class="text-gray-700 mb-1">Z. Xu*#, X. Zhang#, Y. Qiao, G. Liang, S. Shi, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">18th International Conference on Electronic Materials 2024, (Hong Kong, China, May 17-May 20, 2024)</p>
+                </div>
+
+                <!-- Conference 22 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">22</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Spin-Orbit Torque Switching of Mn<sub>3</sub>Sn in Configuration II</p>
+                    <p class="text-gray-700 mb-1">Z. Xu, X. Zhang, Y. Qiao, G. Liang, S. Shi, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">IEEE International Magnetics Conference (INTERMAG), (Rio de Janeiro, Brazil, May 5-May 10, 2024)</p>
+                </div>
+
+                <!-- Conference 21 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">21</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Vortex Motion Mediated Back-and-Forth Magnetization Switching in Ferrimagnets</p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">The 68th Annual Conference on Magnetism and Magnetic Materials (MMM 2023), (Dallas, United States, Oct. 30-Nov. 3, 2023)</p>
+                </div>
+
+                <!-- Conference 20 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">20</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Atomistic Modelling of Spatially Resolved Oscillation Dynamics in Ferrimagnetic Spin-Chain</p>
+                    <p class="text-gray-700 mb-1">X. Zhang, Z. Xu, J. Ren, Y. Qiao, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Nagoya, Japan, Sept.05-08, 2023)</p>
+                </div>
+
+                <!-- Conference 19 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">19</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Current Induced Spatially Nonuniform Switching in Ferrimagnets based on Atomistic Model</p>
+                    <p class="text-gray-700 mb-1">B. Cai*, X. Zhang, <b>Zhifeng Zhu</b>, G. Liang*</p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Nagoya, Japan, Sept.05-08, 2023)</p>
+                </div>
+
+                <!-- Conference 18 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">18</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Effect of Non-uniform Atom Distribution on Ferrimagnetic Domain Wall Motion Based on an Atomistic Model</p>
+                    <p class="text-gray-700 mb-1">J. Ren, Z. Xu, X. Zhang, J. Long, Z. Yuan, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Nagoya, Japan, Sept.05-08, 2023)</p>
+                </div>
+
+                <!-- Conference 17 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">17</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Spin-Orbit Torque-Induced Field-Free Switching of a Perpendicular Antiferromagnet</p>
+                    <p class="text-gray-700 mb-1">Zhengde Xu, Jie Ren, Zhengping Yuan, Yue Xin, Xue Zhang, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">IEEE International Magnetics Conference (INTERMAG), (Sendai, Japan, May 15-May 19, 2023)</p>
+                </div>
+
+                <!-- Conference 16 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">16</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Ferrimagnetic MRAM and neuromorphic computing, Semiconductor Technology Forum</p>
+                    <p class="text-gray-700 mb-1">(Invited) <b>Zhifeng Zhu*#</b></p>
+                    <p class="text-gray-600 italic">(Shanghai, China, Dec. 02-03, 2022)</p>
+                </div>
+
+                <!-- Conference 15 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">15</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">基于双亚晶格宏自旋模型的自旋力矩驱动亚铁磁动力学研究</p>
+                    <p class="text-gray-700 mb-1 chinese-text">袁正平#, 岳玥, 安丽华, 徐正德, 张雪, 龙靖威, 任杰, <b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">中国物理学会CPS2022秋季学术会议, (深圳, 中国, Nov. 17-Nov. 20, 2022)</p>
+                </div>
+
+                <!-- Conference 14 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">14</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">基于原子模型的亚铁磁空间动力学研究</p>
+                    <p class="text-gray-700 mb-1 chinese-text">张雪#, 任杰, 蔡葆昉, 袁正平, 徐正德, Liang Guangchao, <b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">中国物理学会CPS2022秋季学术会议, (深圳, 中国, Nov. 17-Nov. 20, 2022)</p>
+                </div>
+
+                <!-- Conference 13 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">13</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">垂直反铁磁体的无场自旋轨道力矩翻转</p>
+                    <p class="text-gray-700 mb-1 chinese-text">徐正德#, 任杰, 蔡葆昉, 岳玥, 张雪, 史书园, 杨雨梦, <b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">中国物理学会CPS2022秋季学术会议, (深圳, 中国, Nov. 17-Nov. 20, 2022)</p>
+                </div>
+
+                <!-- Conference 12 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">12</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Theoretical investigation of Tunable Ferrimagnetic Spin-Chain Oscillation Based on Atomistic Spin Model Simulation</p>
+                    <p class="text-gray-700 mb-1">Baofang Cai, Xue Zhang, <b>Zhifeng Zhu</b>, Guangchao Liang*</p>
+                    <p class="text-gray-600 italic">The 67th Annual Conference on Magnetism and Magnetic Materials (MMM 2022), (Minneapolis, United States, Oct. 31-Nov. 4, 2022)</p>
+                </div>
+
+                <!-- Conference 11 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">11</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">THz Ferrimagnetic Oscillation Based on Atomistic Model</p>
+                    <p class="text-gray-700 mb-1">Xue Zhang, Baofang Cai, Jie Ren, Zhengping Yuan, Yumeng Yang, Guangchao Liang, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Chiba, Japan, Sept.26-29, 2022)</p>
+                </div>
+
+                <!-- Conference 10 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">10</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Study of Write Error Rate in MRAM with Fixed Voltage Input</p>
+                    <p class="text-gray-700 mb-1">Lihua An*, Yue Xin, Zhengping Yuan, Yumeng Yang, and <b>Zhifeng Zhu*</b></p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Chiba, Japan, Sept.26-29, 2022)</p>
+                </div>
+
+                <!-- Conference 9 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">9</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">Out-of-plane spin polarization driven domain wall motion</p>
+                    <p class="text-gray-700 mb-1 chinese-text">龙靖威, 杨雨梦, <b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">第十九届全国磁学和磁性材料会议, (海南, 中国, Nov. 3-Nov. 6, 2021)</p>
+                </div>
+
+                <!-- Conference 8 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">8</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">Spintronic Neuron with Trainable Activation Function</p>
+                    <p class="text-gray-700 mb-1 chinese-text">辛玥, 周康, 杨雨梦, 高盛华, <b>祝智峰*</b></p>
+                    <p class="text-gray-600 italic chinese-text">第十九届全国磁学和磁性材料会议, (海南, 中国, Nov. 3-Nov. 6, 2021)</p>
+                </div>
+
+                <!-- Conference 7 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">7</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">超快磁随机存储器与类脑计算器件研究</p>
+                    <p class="text-gray-700 mb-1 chinese-text">（特邀报告）<b>祝智峰</b></p>
+                    <p class="text-gray-600 italic chinese-text">自旋电子器件前沿论坛 (Virtual, Oct. 28, 2021)</p>
+                </div>
+
+                <!-- Conference 6 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">6</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2 chinese-text">基于亚铁磁材料的超快磁性随机存储器及其在类脑神经网络中的应用</p>
+                    <p class="text-gray-700 mb-1 chinese-text">（特邀报告）<b>祝智峰</b></p>
+                    <p class="text-gray-600 italic chinese-text">第26届全国信息存储技术学术会议, (2020年9月24-25日, 上海)</p>
+                </div>
+
+                <!-- Conference 5 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">5</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Compact Probabilistic Poisson Neuron based on Back-Hopping Oscillation in STT-MRAM for All-Spin Deep Spiking Neural Network</p>
+                    <p class="text-gray-700 mb-1">M. Wu, M. Huang, <b>Z. Zhu</b>, F. Liang, M. Hong, J. Deng, J. Wei, S. Shen, C. Wu, G. Liang and T. Hou*</p>
+                    <p class="text-gray-600 italic">2020 Symposium on VLSI Technology and Circuits, accepted</p>
+                </div>
+
+                <!-- Conference 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">4</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Temperature aware study of spin torque switching in ferrimagnetic alloy</p>
+                    <p class="text-gray-700 mb-1"><b>Zhifeng Zhu*</b>, Wangyang Feng, and Guangchao Liang*</p>
+                    <p class="text-gray-600 italic">2nd SG-SPIN/Tohoku Workshop on Spintronics (Singapore, Feb.22, 2019)</p>
+                </div>
+
+                <!-- Conference 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">3</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Ultrafast domain wall propagation in ferrimagnets by spin-orbit torques</p>
+                    <p class="text-gray-700 mb-1">Kaiming Cai, Rahul Mishra, Lizhu Ren, <b>Zhifeng Zhu</b>, Guangchao Liang, Kie L. Teo, and Hyunsoo Yang*</p>
+                    <p class="text-gray-600 italic">Joint MMM-Intermag Conference, (Washington, DC, 2019)</p>
+                </div>
+
+                <!-- Conference 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">2</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Modeling of Spin Torque Switching in Ferrimagnetic Material Using Landau-Lifshitz-Bloch Equation</p>
+                    <p class="text-gray-700 mb-1"><b>Zhifeng Zhu*</b>, Wangyang Feng, and Guangchao Liang*</p>
+                    <p class="text-gray-600 italic">Magnetics Symposium, (Singapore, Oct.05, 2017)</p>
+                </div>
+
+                <!-- Conference 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-sm font-semibold text-primary-600 mb-2">1</p>
+                    <p class="text-lg font-semibold text-gray-900 mb-2">Wrangling Spin-Orbit-Torque Voltage-Controlled-Oscillator</p>
+                    <p class="text-gray-700 mb-1"><b>Zhifeng Zhu*</b>, Gaurav Gupta*, Hsin Lin, and Guangchao Liang</p>
+                    <p class="text-gray-600 italic">International Conference on Solid State Devices and Materials (SSDM), (Tsukuba, Japan, Sept.27, 2016)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theses Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-4 border-primary-500">Theses</h2>
+
+            <div class="space-y-6">
+                <!-- Thesis 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="https://scholarbank.nus.edu.sg/handle/10635/160625" class="hover:text-primary-600 transition" target="_blank" rel="noopener">
+                            SPINTRONIC OSCILLATORS FOR WIDEBAND AND THz APPLICATIONS
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>Z. Zhu</b></p>
+                    <p class="text-gray-600 italic">Ph.D Thesis</p>
+                </div>
+
+                <!-- Thesis 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="assets/img/thesis/2020231096_龙靖威_赛道存储器和自旋转移磁随机存储器的改进研究_20230612104737.pdf" download class="hover:text-primary-600 transition">
+                            赛道存储器和自旋转移磁随机存储器的改进研究
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>龙靖威</b></p>
+                    <p class="text-gray-600 italic">M.S. Thesis</p>
+                </div>
+
+                <!-- Thesis 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="assets/img/thesis/2020231073_辛玥_自旋突触和自旋神经元实现具有可训练激活函数的类脑计算网络_20230609231215.pdf" download class="hover:text-primary-600 transition">
+                            自旋突触和自旋神经元实现具有可训练激活函数的类脑计算网络
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>辛玥</b></p>
+                    <p class="text-gray-600 italic">M.S. Thesis</p>
+                </div>
+
+                <!-- Thesis 0 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <p class="text-lg font-semibold text-gray-900 mb-2">
+                        <a href="assets/img/thesis/2020231028_张伟岩_低阈值电压闪存单元的结构设计与工艺研究_20230613211802.pdf" download class="hover:text-primary-600 transition">
+                            低阈值电压闪存单元的结构设计与工艺研究
+                        </a>
+                    </p>
+                    <p class="text-gray-700 mb-1"><b>张伟岩</b></p>
+                    <p class="text-gray-600 italic">M.S. Thesis</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Contact</h3>
+                    <div class="flex items-start text-gray-300">
+                        <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a1 1 0 010-1.414 1.414l1.414 1.414a1 1 0 010 1.414l-1.414 1.414a2 2 0 11.42 1.42A2.5 2.5 0 016 6.94l.64 6a2.94L6 4.42A2.5 2.5 0 016 6.94l.64 6a2.94A2.5 2.5 0 016 6.94l.64 6a2.94z"/>
+                        </svg>
+                        <span>393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>(School of Information Science and Technology, ShanghaiTech University)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Email</h3>
+                    <div class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884z"/>
+                        </svg>
+                        <a href="mailto:zzfmvp@gmail.com" class="hover:text-primary-400 transition">zzfmvp@gmail.com</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Connect</h3>
+                    <div class="space-y-2">
+                        <a href="https://scholar.google.com.sg/citations?user=r5tFJ0YAAAAJ" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-8193-7422" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">ORCID</a>
+                        <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <p>The website is mainly maintained by Zhengde Xu (2021 - present)</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
