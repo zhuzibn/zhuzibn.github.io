@@ -2,296 +2,212 @@
 <html lang="en">
 
 <head>
-    <title>COSMAL</title>
+    <title>COSMAL - Gallery</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="assets/img/shanghaiTech.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/shanghaiTech.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Font configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!--
-
-    TemplateMo 559 Zay Shop
-
-    https://templatemo.com/tm-559-zay-shop
-
-    -->
-    <style>
-        /* 添加样式以将图像居中并调整大小 */
-        .card-img.Gallery {
-            display: block;
-            margin: 0 auto;
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
         }
+    </script>
 
-        p {
-            text-align: center;
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .chinese-text {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
         }
     </style>
+
+    <link rel="apple-touch-icon" href="assets/img/shanghaitech.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/shanghaitech.png">
 </head>
 
-<body>
-<!-- Start Top Nav -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-    <div class="container text-light">
-        <div class="w-100 d-flex justify-content-between">
-            <div>
-                <i class="fa fa-envelope mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
-                <i class="fa fa-phone mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+86-21-20684445">+86-21-20684445</a>
-            </div>
-            <div>
-                <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i
-                        class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
-                        class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://twitter.com/" target="_blank"><i
-                        class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
-                        class="fab fa-linkedin fa-sm fa-fw"></i></a>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2 text-sm">
+                <div class="flex items-center space-x-4">
+                    <a class="hover:text-primary-400 transition" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
+                    <a class="hover:text-primary-400 transition" href="tel:+86-21-20684445">+86-21-20684445</a>
+                </div>
             </div>
         </div>
     </div>
-</nav>
-<!-- Close Top Nav -->
 
-
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-
-        <a class="navbar-brand text-dark logo h1 align-self-center" href="index.html">
-            计算自旋电子<br><span style="font-size: smaller;">COSMAL</span>
-        </a>
-
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
-             id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Group.html">Group</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Openings.html">Openings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Code.html">Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Teaching.html">Teaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Labmanual.html">Labmanual</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="News.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Invited Talk.html">Invited Talk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Personal.html">Personal</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                        <div class="input-group-text">
-                            <i class="fa fa-fw fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal"
-                   data-bs-target="#templatemo_search">
-                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-gray-900 chinese-text">计算自旋电子</span>
+                    <span class="text-lg font-semibold text-primary-600">COSMAL</span>
                 </a>
 
-            </div>
-        </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index-modern.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+                    <a href="research-modern.html" class="text-gray-600 hover:text-primary-600 transition">Research</a>
+                    <a href="Group-modern.html" class="text-gray-600 hover:text-primary-600 transition">Group</a>
+                    <a href="News-modern.html" class="text-gray-600 hover:text-primary-600 transition">News</a>
+                    <a href="Invited-Talk-modern.html" class="text-gray-600 hover:text-primary-600 transition">Talks</a>
+                    <a href="Awards-modern.html" class="text-gray-600 hover:text-primary-600 transition">Awards</a>
+                    <a href="Teaching-modern.html" class="text-gray-600 hover:text-primary-600 transition">Teaching</a>
+                    <a href="Labmanual-modern.html" class="text-gray-600 hover:text-primary-600 transition">Labmanual</a>
+                    <a href="Gallery-modern.html" class="text-gray-900 font-medium">Gallery</a>
+                </div>
 
-    </div>
-</nav>
-<!-- Close Header -->
-
-<!-- Modal -->
-<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="w-100 pt-1 mb-5 text-right">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form action="" method="get" class="modal-content modal-body border-0 p-0">
-            <div class="input-group mb-2">
-                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                <button type="submit" class="input-group-text bg-success text-light">
-                    <i class="fa fa-fw fa-search text-white"></i>
+                <button type="button" class="lg:hidden inline-flex items-center p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
                 </button>
             </div>
-        </form>
-    </div>
-</div>
 
-<section class="bg-success py-5">
-    <div class="container">
-        <div class="row align-items-center py-5">
-            <div class="col-md-8 text-white text-center"> <!-- 添加 text-center 类 -->
-                <h1>Group Photos</h1>
-                <p>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Close Banner -->
-
-<!-- Start Section -->
-<section class="container py-5">
-    <div class="card rounded-0 border-0"> <!-- 添加 border-0 类 -->
-        <img class="card-img rounded-0 img-fluid Gallery" src="assets/img/groupphoto2023.jpg">
-    </div>
-    <h1 style="font-size: 24px; text-align: center;">Group Photo_2023</h1>
-    <div class="card rounded-0 border-0"> <!-- 添加 border-0 类 -->
-        <img class="card-img rounded-0 img-fluid Gallery" src="assets/img/groupphoto2022.jpg">
-    </div>
-     <h1 style="font-size: 24px; text-align: center;">Group Photo_2022</h1>
-    <div class="card rounded-0 border-0"> <!-- 添加 border-0 类 -->
-        <img class="card-img rounded-0 img-fluid Gallery" src="assets/img/groupphoto2021.png">
-    </div>
-     <h1 style="font-size: 24px; text-align: center;">Group Photo_2021</h1>
-</section>
-<!-- End Section -->
-
-<!-- End Section -->
-
-<!-- Start Brands -->
-
-<!--End Brands-->
-
-
-<!-- Start Footer -->
-<footer class="bg-dark" id="tempaltemo_footer">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Contact</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li>
-                        <i class="fas fa-map-marker-alt fa-fw"></i>
-                        393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>
-                        (School of Information Science and Technology, ShanghaiTech University)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">e-mail</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li>
-                        <i class="fa fa-envelope fa-fw"></i>
-                        <a class="text-decoration-none" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Social</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <a href="https://scholar.google.com.sg/citations?hl=en&view_op=list_works&gmla=AJsN-F6VFqH1zWutwzwvhN4b43R06X91s_sBd1BfaiRldK2NYzR7qwy2EzPH6bkXfnrbltaK0gkxF96QNSqB4H0izNMdoUXhsQ&user=r5tFJ0YAAAAJ"
-                       target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-                    <a href="https://orcid.org/0000-0002-8193-7422"><i class="ai ai-fw ai-orcid-square"></i>
-                        ORCID</a><br>
-                    <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" class="author-social" target="_blank">
-                        LinkedIn</a><br>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="row text-light mb-4">
-            <div class="col-12 mb-3">
-                <div class="w-100 my-3 border-top border-light"></div>
-            </div>
-            <div class="col-auto me-auto">
-                <ul class="list-inline text-left footer-icons">
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
-                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i
-                                class="fab fa-instagram fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
-                                class="fab fa-twitter fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i
-                                class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-auto">
-                <label class="sr-only" for="subscribeEmail">Email address</label>
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
-                           placeholder="Email address">
-                    <div class="input-group-text btn-success text-light">Subscribe</div>
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Home</a>
+                    <a href="research-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Research</a>
+                    <a href="Group-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Group</a>
+                    <a href="News-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">News</a>
+                    <a href="Invited-Talk-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Talks</a>
+                    <a href="Awards-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Awards</a>
+                    <a href="Teaching-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Teaching</a>
+                    <a href="Labmanual-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Labmanual</a>
+                    <a href="Gallery-modern.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-gray-50 rounded-md">Gallery</a>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="w-100 bg-black py-3">
-        <div class="container">
-            <div class="row pt-2">
-                <div class="col-12">
-                    <p class="text-left text-light">
-                    </p>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-bold">Group Photos</h1>
+            <p class="mt-2 text-xl text-primary-100">Memories from our lab gatherings and events</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Gallery Grid -->
+                    <a href="Labmanual-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Labmanual</a>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 2023 Photo -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                    <img src="assets/img/groupphoto2023.jpg"
+                         alt="Group Photo 2023"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 text-center">Group Photo 2023</h3>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End Footer -->
 
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
+            <!-- 2022 Photo -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                    <img src="assets/img/groupphoto2022.jpg"
+                         alt="Group Photo 2022"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 text-center">Group Photo 2022</h3>
+                </div>
+            </div>
+
+            <!-- 2021 Photo -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+                    <img src="assets/img/groupphoto2021.png"
+                         alt="Group Photo 2021"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 text-center">Group Photo 2021</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Contact</h3>
+                    <div class="flex items-start text-gray-300">
+                        <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a1 1 0 010-1.414 1.414l1.414 1.414a1 1 0 010 1.414l-1.414 1.414a2 2 0 11.42 1.42A2.5 2.5 0 016 6.94l.64 6a2.94L6 4.42A2.5 2.5 0 016 6.94l.64 6a2.94A2.5 2.5 0 016 6.94l.64 6a2.94z"/>
+                        </svg>
+                        <span>393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>(School of Information Science and Technology, ShanghaiTech University)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Email</h3>
+                    <div class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884z"/>
+                        </svg>
+                        <a href="mailto:zzfmvp@gmail.com" class="hover:text-primary-400 transition">zzfmvp@gmail.com</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Connect</h3>
+                    <div class="space-y-2">
+                        <a href="https://scholar.google.com.sg/citations?user=r5tFJ0YAAAAJ" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-8193-7422" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">ORCID</a>
+                        <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <p>The website is mainly maintained by Zhengde Xu (2021 - present)</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
-
 </html>

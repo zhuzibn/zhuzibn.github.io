@@ -2,652 +2,398 @@
 <html lang="en">
 
 <head>
-    <title>COSMAL</title>
+    <title>COSMAL - Group</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .chinese-text {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+    </style>
+
     <link rel="apple-touch-icon" href="assets/img/shanghaiTech.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/shanghaiTech.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!--
-
-    TemplateMo 559 Zay Shop
-
-    https://templatemo.com/tm-559-zay-shop
-
-    -->
 </head>
 
-<body>
-<!-- Start Top Nav -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-    <div class="container text-light">
-        <div class="w-100 d-flex justify-content-between">
-            <div>
-                <i class="fa fa-envelope mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
-                <i class="fa fa-phone mx-2"></i>
-                <a class="navbar-sm-brand text-light text-decoration-none"
-                   href="tel:+86-21-20684445">+86-21-20684445</a>
-            </div>
-            <div>
-                <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i
-                        class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
-                        class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://twitter.com/" target="_blank"><i
-                        class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
-                        class="fab fa-linkedin fa-sm fa-fw"></i></a>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2 text-sm">
+                <div class="flex items-center space-x-4">
+                    <a class="hover:text-primary-400 transition" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
+                    <a class="hover:text-primary-400 transition" href="tel:+86-21-20684445">+86-21-20684445</a>
+                </div>
             </div>
         </div>
     </div>
-</nav>
-<!-- Close Top Nav -->
 
-
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-
-        <a class="navbar-brand text-dark logo h1 align-self-center" href="index.html">
-            计算自旋电子<br><span style="font-size: smaller;">COSMAL</span>
-        </a>
-
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
-             id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="research.html">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Group.html">Group</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Openings.html">Openings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Code.html">Code</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Teaching.html">Teaching</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Labmanual.html">Labmanual</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="News.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Invited Talk.html">Invited Talk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Awards.html">Awards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Personal.html">Personal</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                        <div class="input-group-text">
-                            <i class="fa fa-fw fa-search"></i>
-                        </div>
-                    </div>
-                </div>
-                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal"
-                   data-bs-target="#templatemo_search">
-                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index-modern.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-gray-900 chinese-text">计算自旋电子</span>
+                    <span class="text-lg font-semibold text-primary-600">COSMAL</span>
                 </a>
 
-            </div>
-        </div>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index-modern.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+                    <a href="research-modern.html" class="text-gray-600 hover:text-primary-600 transition">Research</a>
+                    <a href="Group-modern.html" class="text-gray-900 font-medium">Group</a>
+                    <a href="News-modern.html" class="text-gray-600 hover:text-primary-600 transition">News</a>
+                    <a href="Invited-Talk-modern.html" class="text-gray-600 hover:text-primary-600 transition">Talks</a>
+                    <a href="Awards-modern.html" class="text-gray-600 hover:text-primary-600 transition">Awards</a>
+                    <a href="Teaching-modern.html" class="text-gray-600 hover:text-primary-600 transition">Teaching</a>
+                    <a href="Labmanual-modern.html" class="text-gray-600 hover:text-primary-600 transition">Labmanual</a>
+                    <a href="Gallery-modern.html" class="text-gray-600 hover:text-primary-600 transition">Gallery</a>
+                </div>
 
-    </div>
-</nav>
-<!-- Close Header -->
-
-<!-- Modal -->
-<div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="w-100 pt-1 mb-5 text-right">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form action="" method="get" class="modal-content modal-body border-0 p-0">
-            <div class="input-group mb-2">
-                <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                <button type="submit" class="input-group-text bg-success text-light">
-                    <i class="fa fa-fw fa-search text-white"></i>
+                <button type="button" class="lg:hidden inline-flex items-center p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
                 </button>
             </div>
-        </form>
-    </div>
-</div>
 
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Home</a>
+                    <a href="research-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Research</a>
+                    <a href="Group-modern.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-gray-50 rounded-md">Group</a>
+                    <a href="News-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">News</a>
+                    <a href="Invited-Talk-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Talks</a>
+                    <a href="Awards-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Awards</a>
+                    <a href="Teaching-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Teaching</a>
+                    <a href="Labmanual-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Labmanual</a>
+                    <a href="Gallery-modern.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- Start Content -->
-<div class="container py-5">
-    <div class="row">
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-bold">Group Members</h1>
+            <p class="mt-2 text-xl text-primary-100">Our wonderful team of researchers</p>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        <div class="col-lg-9">
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-inline shop-top-menu pb-3 pt-1">
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#"></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#"></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#"></a>
-                        </li>
+        <!-- PI Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-gradient-to-br from-primary-50 to-primary-100 p-12 flex items-center justify-center">
+                        <img src="assets/img/2020zhifeng.jpg" alt="Prof. Zhifeng Zhu" class="w-48 h-48 rounded-full shadow-xl object-cover">
+                    </div>
+                    <div class="p-8 md:w-3/5">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-2">Prof. Zhifeng Zhu</h2>
+                        <p class="text-lg text-gray-700 mb-4">Principal Investigator</p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-700">
+                                <svg class="w-5 h-5 mr-3 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884zm0 0l7.997 3.998L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884z"/>
+                                </svg>
+                                <span>zzfmvp@gmail.com</span>
+                            </div>
+
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full">Computational Physics</span>
+                                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-sm font-medium rounded-full">Spintronics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graduate Students Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-2 border-primary-500">Graduate Students</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Xue Zhang -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/zhangxue.jpg" alt="Xue Zhang" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Xue Zhang</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">Ph.D Student</span>
+                            <span class="text-sm text-gray-600">Since 2021</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> Atomistic Simulation, Magnetization Switching</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Xidian University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zhengde Xu -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/xuzhengde.jpg" alt="Zhengde Xu" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Zhengde Xu</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">Ph.D Student</span>
+                            <span class="text-sm text-gray-600">Since 2021</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> Spin-Orbit Torque, AFM and FiM</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Hebei University of Technology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zhenhang Kong -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/kongzhenhang.jpg" alt="Zhenhang Kong" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Zhenhang Kong</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">Ph.D Student</span>
+                            <span class="text-sm text-gray-600">Since 2023</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> Theoretical study of Spin-Orbit Torque</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Xidian University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boyu Zhao -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/zhaoboyu.jpg" alt="Boyu Zhao" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Boyu Zhao</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-info-600 text-white text-xs font-medium rounded-full">Master Student</span>
+                            <span class="text-sm text-gray-600">Since 2023</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> DFT, Spintronics Devices</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Beihang University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dongyang Chen -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/chendongyang.jpg" alt="Dongyang Chen" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Dongyang Chen</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-info-600 text-white text-xs font-medium rounded-full">Master Student</span>
+                            <span class="text-sm text-gray-600">Since 2024</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> 2D Material</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Southwest Petroleum University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xuezhong Li -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/lixuezhong.jpg" alt="Xuezhong Li" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Xuezhong Li</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-info-600 text-white text-xs font-medium rounded-full">Master Student</span>
+                            <span class="text-sm text-gray-600">Since 2025</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> 2D Material, Magnetic Devices</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Beihang University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chenhao Xu -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/xuchenhao.jpg" alt="Chenhao Xu" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chenhao Xu</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-info-600 text-white text-xs font-medium rounded-full">Master Student</span>
+                            <span class="text-sm text-gray-600">Since 2025</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> Spintronics</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. Beihang University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guo Chen -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+                        <img src="assets/img/chenguo.jpg" alt="Guo Chen" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Guo Chen</h3>
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-info-600 text-white text-xs font-medium rounded-full">Master Student</span>
+                            <span class="text-sm text-gray-600">Since 2025</span>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-700"><span class="font-medium">Research Interests:</span> Spintronics Devices, Magnetic Materials</p>
+                            <p class="text-sm text-gray-600 mb-1">B.Sc. ShanghaiTech University</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Former Members Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 pb-4 border-b-2 border-gray-300">Former Members</h2>
+
+            <div class="bg-gray-50 rounded-xl p-8">
+                <p class="text-lg text-gray-700 mb-6">Alumni who have graduated and moved on to positions in academia or industry.</p>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Alumni</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>Pingchuan Ma (RA) B.Sc. ShanghaiTech</li>
+                            <li>Jingwei Long (Master 2020) B.Sc. SUSTC</li>
+                            <li>Yue Xin (Master 2020) B.Sc. USST</li>
+                            <li>Weiyan Zhang (Master 2020) B.Sc. HNNU</li>
+                            <li>Jie Ren (Master 2020) B.Sc. XUT</li>
+                            <li>Zhengping Yuan (Master 2021) B.Sc. HUST</li>
+                            <li>Zhuo Xu (Master 2022) B.Sc. ShanghaiTech</li>
+                            <li>Yixiao Qiao (Master 2022) B.Sc. ShanghaiTech</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 chinese-text">Professional master's degree (专硕)</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>2020: Weiyan Zhang with HHGRACE (张伟岩, 华虹宏力)</li>
+                            <li>2022: Jizhou Lin (林济舟, 上海信投)、Jianbin Yang with ICT, CAS (杨建斌, 中科院计算所)</li>
+                            <li>2024: Qizhang He (何奇璋, 上海处理器中心)、Feifan Lu (卢非凡, 上海处理器中心)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FYP Students -->
+                <div class="mt-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">FYP Students</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>2020: Yu Li (李宇), pursue master degree at Peking University</li>
+                        <li>2021: Siyun Chen (陈思韵), pursue master degree abroad</li>
+                        <li>2022: Lihua An (安丽华), pursue master degree at ShanghaiTech University</li>
+                        <li>2024: Wending Zhao (赵文定), pursue PhD degree at Fudan University, Heqing Huang (黄河清)</li>
+                        <li>2025: Xuezhong Li (李学众), and Guo Chen (陈果) pursue master degree at ShanghaiTech University</li>
                     </ul>
                 </div>
-
             </div>
+        </section>
 
-            <!-- Enhanced PI Section -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="flex-grow-1">
-                            <h1 class="text-left mb-0"
-                                style="font-size: 2.5rem; font-weight: 800; color: #003366; letter-spacing: 1px; text-transform: uppercase;">
-                                Principal Investigator
-                            </h1>
-                        </div>
-                        <div class="border-start border-3 border-warning ps-3"
-                             style="border-color: #ffc107 !important;">
-                            <p class="mb-0 text-muted" style="font-size: 1rem;">Lab Director</p>
-                        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Contact</h3>
+                    <div class="flex items-start text-gray-300">
+                        <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a1 1 0 010-1.414 1.414l1.414 1.414a1 1 0 010-1.414 1.414l1.414a2 2 0 11.42 1.42A2.5 2.5 0 016 6.94l.64 6a2.94A2.5 2.5 0 016 6.94l.64 6a2.94z"/>
+                        </svg>
+                        <span>393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>(School of Information Science and Technology, ShanghaiTech University)</span>
                     </div>
+                </div>
 
-                    <div class="card border-0 shadow-lg"
-                         style="border-radius: 15px; overflow: hidden; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-                        <div class="row g-0">
-                            <div class="col-md-4 p-4 d-flex align-items-center justify-content-center"
-                                 style="background-color: rgba(0, 51, 102, 0.03);">
-                                <div class="position-relative" style="width: 200px; height: 250px;">
-                                    <img class="img-fluid rounded-circle shadow-sm" src="assets/img/2020zhifeng.jpg"
-                                         style="width: 100%; height: 100%; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
-                                         alt="Zhifeng Zhu">
-                                    <div class="position-absolute bottom-0 end-0 bg-warning rounded-circle p-2 shadow"
-                                         style="width: 50px; height: 50px;">
-                                        <i class="fas fa-star fa-lg text-white d-flex justify-content-center align-items-center h-100"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h2 class="card-title mb-1" style="font-weight: 700; color: #003366;">
-                                                Zhifeng Zhu</h2>
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Email</h3>
+                    <div class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884zm0 0l7.997 3.998L10 9.882l7.997 3.998A2 2 0 0012 5.884L2.003 5.884z"/>
+                        </svg>
+                        <a href="mailto:zzfmvp@gmail.com" class="hover:text-primary-400 transition">zzfmvp@gmail.com</a>
+                    </div>
+                </div>
 
-                                        </div>
-                                        <span class="badge bg-warning text-dark py-2 px-3"
-                                              style="font-size: 0.9rem; font-weight: 600;">
-                                <i class="fas fa-flask me-2"></i>Research Lead
-                            </span>
-                                    </div>
-
-                                    <div class="border-top border-bottom py-3 my-3"
-                                         style="border-color: rgba(0, 51, 102, 0.1) !important;">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p class="mb-1"><i class="fas fa-envelope me-2 text-warning"></i>
-                                                    <strong>Email:</strong></p>
-                                                <p class="text-break">zzfmvp@gmail.com</p>
-                                            </div>
-                                            <div class="col-6">
-                                                <p class="mb-1"><i class="fas fa-graduation-cap me-2 text-warning"></i>
-                                                    <strong>Position:</strong></p>
-                                                <p>Assistant Professor</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-light text-dark py-2 px-3" style="font-weight: 500;">
-                                <i class="fas fa-microscope me-1 text-warning"></i> Computational Physics
-                            </span>
-                                        <span class="badge bg-light text-dark py-2 px-3" style="font-weight: 500;">
-                                <i class="fas fa-atom me-1 text-warning"></i> Spintronics
-                            </span>
-                                        <span class="badge bg-light text-dark py-2 px-3" style="font-weight: 500;">
-                                <i class="fas fa-brain me-1 text-warning"></i> Quantum Materials
-                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Connect</h3>
+                    <div class="space-y-2">
+                        <a href="https://scholar.google.com.sg/citations?user=r5tFJ0YAAAAJ" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-8193-7422" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">ORCID</a>
+                        <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">LinkedIn</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Graduate Students (updated: 8 members) -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h1 class="text-left mb-4"
-                        style="font-size: 2rem; font-weight: 700; color: #003366; padding-bottom: 0.5rem; border-bottom: 2px solid #ffc107; display: inline-block;">
-                        Graduate Students
-                    </h1>
-
-                    <!-- First two rows: six cards (3 per row on md and up) -->
-                    <div class="row g-4">
-                        <!-- Xue Zhang -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/zhangxue.jpg" alt="Xue Zhang"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Xue Zhang</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-warning text-dark me-2">Ph.D Student</span>
-                                        <small class="text-muted">Since 2021</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. Xidian University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">Atomistic Simulation, Magnetization Switching</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Zhengde Xu -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/xuzhengde.jpg" alt="Zhengde Xu"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Zhengde Xu</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-warning text-dark me-2">Ph.D Student</span>
-                                        <small class="text-muted">Since 2021</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. Hebei University of Technology
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">Spin-Orbit Torque, Switching, AFM and FiM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Zhenhang Kong -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/kongzhenhang.jpg" alt="Zhenhang Kong"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Zhenhang Kong</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-warning text-dark me-2">Ph.D Student</span>
-                                        <small class="text-muted">Since 2023</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. Xidian University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">Theoretical study of Spin-orbital torque-driven switching</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Boyu Zhao -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/zhaoboyu.jpg" alt="Boyu Zhao"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Boyu Zhao</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-info text-dark me-2">Master Student</span>
-                                        <small class="text-muted">Since 2023</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. Beihang University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">AFM switching</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Dongyang Chen -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/chendongyang.jpg" alt="Dongyang Chen"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Dongyang Chen</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-info text-dark me-2">Master Student</span>
-                                        <small class="text-muted">Since 2024</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. Southwest Petroleum University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">2D Material</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Xuezhong Li -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/lixuezhong.jpg" alt="Xuezhong Li"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Xuezhong Li</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-info text-dark me-2">Master Student</span>
-                                        <small class="text-muted">Since 2025</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. ShanghaiTech University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">2D Material</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-                        <!-- Chenhao Xu -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/xuchenhao.jpg" alt="Chenhao Xu"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Chenhao Xu</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-info text-dark me-2">Master Student</span>
-                                        <small class="text-muted">Since 2025</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. ShanghaiTech University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">Spin-Orbit Torque, Magnetization Switching</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Guo Chen -->
-                        <div class="col-md-4">
-                            <div class="card h-100 border-0 shadow-sm" style="border-radius: 10px; overflow: hidden;">
-                                <div class="card-img-top"
-                                     style="height: 200px; overflow: hidden; display: flex; justify-content: center; background: #f8f9fa;">
-                                    <img src="assets/img/chenguo.jpg" alt="Guo Chen"
-                                         style="height: 100%; width: auto; object-fit: contain;">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Guo Chen</h5>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <span class="badge bg-info text-dark me-2">Master Student</span>
-                                        <small class="text-muted">Since 2025</small>
-                                    </div>
-                                    <p class="card-text mb-2">
-                                        <i class="fas fa-graduation-cap me-2 text-muted"></i>
-                                        B.Sc. ShanghaiTech University
-                                    </p>
-                                    <div class="mt-3">
-                                        <p class="mb-1 small text-muted">Research Interests:</p>
-                                        <p class="mb-0">Spintronics Devices, Magnetic Materials</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h1 class="text-center"
-                        style="font-size: 2rem; font-weight: bold; color: #003366; padding-bottom: 1.5rem;">FORMER
-                        MEMBERS</h1>
-
-                    <!-- Alumni and Professional master's degree in one row -->
-                    <div class="row">
-                        <!-- Alumni Column -->
-                        <div class="col-md-6">
-                            <h3 style=" color: #003366;">Alumni</h3>
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>Pingchuan Ma (RA) B.Sc. ShanghaiTech</li>
-                                <li>Jingwei Long (Master 2020) B.Sc. SUSTC</li>
-                                <li>Yue Xin (Master 2020) B.Sc. USST</li>
-                                <li>Weiyan Zhang (Master 2020) B.Sc. HNNU</li>
-                                <li>Jie Ren (Master 2020) B.Sc. XUT</li>
-                                <li>Zhengping Yuan (Master 2021) B.Sc. HUST</li>
-                                <li>Zhuo Xu (Master 2022) B.Sc. ShanghaiTech</li>
-                                <li>Yixiao Qiao (Master 2022) B.Sc. ShanghaiTech</li>
-                            </ul>
-                        </div>
-
-                        <!-- Professional master's degree Column -->
-                        <div class="col-md-6">
-                            <h3 style=" color: #003366;">Professional master's degree (专硕)</h3>
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>2020: Weiyan Zhang with HHGRACE (张伟岩, 华虹宏力)</li>
-                                <li>2022: Jizhou Lin (林济舟, 上海信投)、Jianbin Yang with ICT, CAS (杨建斌,
-                                    中科院计算所)
-                                </li>
-                                <li>2024: Qizhang He (何奇璋, 上海处理器中心)、Feifan Lu (卢非凡, 上海处理器中心)
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- FYP student section below -->
-                    <div class="row mt-4">
-                        <div class="col-12">
-                            <h3 style=" color: #003366;">FYP student</h3>
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>2020: Yu Li (李宇), pursue master degree at Peking University</li>
-                                <li>2021: Siyun Chen (陈思韵), pursue master degree abroad</li>
-                                <li>2022: Lihua An (安丽华), pursue master degree at ShanghaiTech University</li>
-                                <li>2024: Wending Zhao (赵文定), pursue PhD degree at Fudan University, Heqing Huang
-                                    (黄河清)
-                                </li>
-                                <li>2025: Xuezhong Li (李学众), and Guo Chen (陈果) pursue master degree at ShanghaiTech
-                                    University
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-</div>
-<!-- End Content -->
-
-<!-- Start Brands -->
-
-<!--End Carousel Wrapper-->
-
-<!--Controls-->
-<div class="col-1 align-self-center">
-    <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
-        <i class="text-light fas fa-chevron-right"></i>
-    </a>
-</div>
-<!--End Controls-->
-</div>
-</div>
-</div>
-</div>
-</section>
-<!--End Brands-->
-
-
-<!-- Start Footer -->
-<footer class="bg-dark" id="tempaltemo_footer">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Contact</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li>
-                        <i class="fas fa-map-marker-alt fa-fw"></i>
-                        393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>
-                        (School of Information Science and Technology, ShanghaiTech University)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">e-mail</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <li>
-                        <i class="fa fa-envelope fa-fw"></i>
-                        <a class="text-decoration-none" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 pt-5">
-                <h2 class="h2 text-light border-bottom pb-3 border-light">Social</h2>
-                <ul class="list-unstyled text-light footer-link-list">
-                    <a href="https://scholar.google.com.sg/citations?hl=en&view_op=list_works&gmla=AJsN-F6VFqH1zWutwzwvhN4b43R06X91s_sBd1BfaiRldK2NYzR7qwy2EzPH6bkXfnrbltaK0gkxF96QNSqB4H0izNMdoUXhsQ&user=r5tFJ0YAAAAJ"
-                       target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
-                    <a href="https://orcid.org/0000-0002-8193-7422"><i class="ai ai-fw ai-orcid-square"></i>
-                        ORCID</a><br>
-                    <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" class="author-social" target="_blank">
-                        LinkedIn</a><br>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="row text-light mb-4">
-            <div class="col-12 mb-3">
-                <div class="w-100 my-3 border-top border-light"></div>
-            </div>
-            <div class="col-auto me-auto">
-                <ul class="list-inline text-left footer-icons">
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
-                                class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i
-                                class="fab fa-instagram fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
-                                class="fab fa-twitter fa-lg fa-fw"></i></a>
-                    </li>
-                    <li class="list-inline-item border border-light rounded-circle text-center">
-                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i
-                                class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="w-100 bg-black py-3">
-        <div class="container">
-            <div class="row pt-2">
-                <div class="col-12">
-                    <p class="text-left text-light">
-                    </p>
-                </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <p>The website is mainly maintained by Zhengde Xu (2021 - present)</p>
             </div>
         </div>
-    </div>
-    <!-- End Footer -->
+    </footer>
 
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
 </body>
-
 </html>

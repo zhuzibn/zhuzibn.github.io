@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COSMAL - News</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .chinese-text {
+            font-family: 'Noto Sans SC', system-ui, sans-serif;
+        }
+    </style>
+
+    <link rel="apple-touch-icon" href="assets/img/shanghaitech.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/shanghaitech.png">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2 text-sm">
+                <div class="flex items-center space-x-4">
+                    <a class="hover:text-primary-400 transition" href="mailto:zzfmvp@gmail.com">zzfmvp@gmail.com</a>
+                    <a class="hover:text-primary-400 transition" href="tel:+86-21-20684445">+86-21-20684445</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold text-gray-900 chinese-text">计算自旋电子</span>
+                    <span class="text-lg font-semibold text-primary-600">COSMAL</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-600 transition">Home</a>
+                    <a href="research.html" class="text-gray-600 hover:text-primary-600 transition">Research</a>
+                    <a href="Group.html" class="text-gray-600 hover:text-primary-600 transition">Group</a>
+                    <a href="News.html" class="text-gray-900 font-medium">News</a>
+                    <a href="Teaching.html" class="text-gray-600 hover:text-primary-600 transition">Teaching</a>
+                    <a href="Code.html" class="text-gray-600 hover:text-primary-600 transition">Code</a>
+                    <a href="Awards.html" class="text-gray-600 hover:text-primary-600 transition">Awards</a>
+                    <a href="Gallery.html" class="text-gray-600 hover:text-primary-600 transition">Gallery</a>
+                </div>
+
+                <button type="button" class="lg:hidden inline-flex items-center p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100" aria-expanded="false" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden lg:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Home</a>
+                    <a href="research.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Research</a>
+                    <a href="Group.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Group</a>
+                    <a href="News.html" class="block px-3 py-2 text-base font-medium text-gray-900 bg-gray-50 rounded-md">News</a>
+                    <a href="Teaching.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Teaching</a>
+                    <a href="Code.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Code</a>
+                    <a href="Awards.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Awards</a>
+                    <a href="Gallery.html" class="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-md">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl lg:text-4xl font-bold">Lab News</h1>
+            <p class="mt-2 text-xl text-primary-100">Updates and announcements from our research group</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <div class="max-w-4xl mx-auto space-y-8">
+            
+            <!-- 2025 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2025</h2>
+                
+                <div class="space-y-6">
+                    <!-- November 28, 2025 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">November 28, 2025</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Junlin Wang from School of Integrated Circuits, Guangdong University of Technology, who shared a lecture on <a href="assets/img/lecture/WangJunlin.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Atomic-scale simulation of ultrafast spin dynamics in antiferromagnetic materials</a>.</p>
+                                <p class="text-gray-700">by <em class="text-primary-700">Commun. Phys.</em>!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- October 22, 2025 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">October 22, 2025</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper "Layer-dependent spin-orbit torque switching of Néel vector in a van der Waals antiferromagnet."</p>
+                                <p class="text-gray-700">by <em class="text-primary-700">Nat. Commun.</em>!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- October 16, 2025 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">October 16, 2025</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper "Vertical Soliton-Assisted Current Switching in Extremely Thick FeGd Ferrimagnets"</p>
+                                <p class="text-gray-700">by <em class="text-primary-700">Phys. Rev. Lett.</em>!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- September 12, 2025 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">September 12, 2025</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations to Zhuo Xu on receiving <em class="text-primary-700">Si-Nan Award for Best JMM Papers</em> for paper entitled "Anomalous switching pattern in ferrimagnetic memory cell," published in JMMM 611, 172614 (2024).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- August 18, 2025 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">August 18, 2025</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Spin-orbit torque-driven chiral domain wall motion in Mn3Sn."</p>
+                                <p class="text-gray-700">by <em class="text-primary-700">Applied Physics Letters</em>!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-sm text-gray-500 italic mt-6">More news from 2025...</p>
+            </div>
+
+            <!-- 2024 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2024</h2>
+                
+                <div class="space-y-6">
+                    <!-- December 27, 2024 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December 27, 2024</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Zhong Shi from School of Physical Science and Engineering, Tongji University shared a lecture on <a href="assets/img/lecture/Shizhong.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Giant spin Seebeck effect induced by magnon polaritons in magnetic double-umbrella TbG films</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- June 26, 2024 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">June 26, 2024</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Lishu Zhang from Shandong University, who shared a lecture on <a href="assets/img/lecture/LishuZhang.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Spin–orbit cooperative control: field-free antiferromagnetic memory and orbital Hall effect with alternating magnetism</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- May 2024 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">May 2024</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations to Yixiao Qiao and Zhou Xu for being awarded titles of Outstanding Graduate of ShanghaiTech University for year 2024.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 7, 2024 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">April 7, 2024</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome associate professor Lin Wang from School of Mechanical Engineering, Shanghai Jiaotong University shared a lecture on <a href="assets/img/lecture/Wanglin.png" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Research on Physical Properties and Device Applications of Van der Waals Ferroelectrics</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2023 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2023</h2>
+
+                <div class="space-y-6">
+                    <!-- December 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations to Xue Zhang and Zhengde Xu for being awarded titles of Merit Students (三好学生, Only top 5% of students get it), and Zhengping Yuan for being awarded titles of Outstanding Students (优秀学生, Only 10% of students get it) for year 2023.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- October 24, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">October 24, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Guoping Zhao (赵国平) from Sichuan Normal University shared a lecture on <a href="assets/img/lecture/Zhaoguoping.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Progress in micromagnetic research on topological spin structures</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- August 8, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">August 8, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Vortex Motion Mediated Back-and-Forth Magnetization Switching in Ferrimagnets" by The 68th Annual Conference on Magnetism and Magnetic Materials (MMM 2023)!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- July 4, 2023 (two papers) -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 4, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Current Induced Spatially Nonuniform Switching in Ferrimagnets based on Atomistic Model" by 2023 International Conference on Solid State Devices and Materials!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 4, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Effect of Non-uniform Atom Distribution on Ferrimagnetic Domain Wall Motion Based on an Atomistic Model" by 2023 International Conference on Solid State Devices and Materials!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- June 26, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">June 26, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our collaborated paper "Room temperature field-free switching of CoFeB/MgO heterostructure based on large-scale few-layer WTe2" by Cell Rep. Phys. Sci.!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- May 8, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">May 8, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome associate professor Shouzhong Peng (彭守仲) from Beihang University shared a lecture on <a href="assets/img/lecture/Pengshouzhong.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Spin-orbit torque-driven magnetization switching and exchange bias field switching</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 19, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">April 19, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Field-Free Spin–Orbit Torque Switching of an Antiferromagnet with Perpendicular Néel Vector" by <em class="text-primary-700">Journal of Applied Physics</em>!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 17, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">April 17, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Anomalous Impact of Thermal Fluctuations on Spin Transfer Torque Induced Ferrimagnetic Switching" by Journal of Applied Physics!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 10, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">April 10, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Temperature-insensitive reading of a flash memory cell" by Journal of Semiconductors!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- March 29, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">March 29, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Zhe Yuan (袁喆) from Beijing Normal University shared a lecture on <a href="assets/img/lecture/Yuanzhe.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Probabilistic Computing Based on Spintronics Devices</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- March 3, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">March 3, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Unconventional computing based on magnetic tunnel junction" by Appl. Phys. A!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- February 18, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">February 18, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Spin-Orbit Torque-Induced Field-Free Switching of a Perpendicular Antiferromagnet" by IEEE International Magnetics Conference 2023!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- January 13, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">January 13, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome associate professor Xuanyao Fong from National University of Singapore shared a lecture on <a href="assets/img/lecture/Fong.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Domain-specific spintronic systems through system-technology co-design</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- January 11, 2023 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">January 11, 2023</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Comparative Study of Temperature Impact in Spin-Torque Switched Perpendicular and Easy-Cone MTJs" by Nanomaterials!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2022</h2>
+
+                <div class="space-y-6">
+                    <!-- December 2022 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations to Xue Zhang and Yue Xin for respectively being awarded titles of Merit Students (三好学生，Only top 5% of students get it) and Outstanding Students (优秀学生，Only 10% of students get it) for year 2022.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- December 17, 2022 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December 17, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our collaborated paper "Optimal Spin Polarization for Spin–Orbit-Torque Memory and Oscillator" by IEEE Transactions on Electron Devices!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- December 15, 2022 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December 15, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome associate professor Gengchiau Liang from National University of Singapore shared a lecture on <a href="assets/img/lecture/Liang.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">The novel functional devices for future electronics based on Nanoelectronics and spintronics</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- November 21, 2022 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">November 21, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Spatially nonuniform oscillations in ferrimagnets based on an atomistic model" by Physical Review B!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- July 15, 2022 (two papers) -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 15, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "THz Ferrimagnetic Oscillation Based on Atomistic Model" by 2022 International Conference on Solid State Devices and Materials!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 15, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "Study of Write Error Rate in MRAM with Fixed Voltage Input" by 2022 International Conference on Solid State Devices and Materials!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- May 29, 2022 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">May 29, 2022</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our collaborated paper "Magnetodynamic properties on square patterned of FeGaB and Al2O3/FeGaB thin films" by Journal of Materials Science: Materials in Electronics!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2021 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2021</h2>
+
+                <div class="space-y-6">
+                    <!-- December 31, 2021 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">December 31, 2021</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome Dr. Weichao Yu (余伟超) from Fudan University shared a lecture on <a href="assets/img/lecture/Yuweichao.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Intelligent magnetic textures</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- November 26, 2021 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">November 26, 2021</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome professor Fan Weijia (樊维佳) from Tongji University shared a lecture on <a href="assets/img/lecture/Fanweijia.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Atomistic simulation of noncollinear antiferromagnetic dynamics</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- October 29, 2021 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">October 29, 2021</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Welcome associate professor Yue Zhang (张悦) from Huazhong University of Science and Technology shared a lecture on <a href="assets/img/lecture/Zhangyue.jpg" class="text-primary-600 hover:text-primary-700 transition" target="_blank">Antiferromagnetic dynamics with tunable frequency bands</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- July 14, 2021 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 14, 2021</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Warm welcome to our new group member, Zhengping Yuan, Zhengde Xu, Xue Zhang.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- April 13, 2021 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">April 13, 2021</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Congratulations on acceptance of our paper entitled "An Overview of Spintronic True Random Number Generator" by Frontiers in Physics!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2020 News -->
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-4 border-b-2 border-primary-500">2020</h2>
+
+                <div class="space-y-6">
+                    <!-- July 14, 2020 -->
+                    <div class="border-l-4 border-gray-200 pl-6 pr-6 hover:bg-gray-50 rounded-lg transition">
+                        <div class="flex items-start mb-3">
+                            <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 0 012 2v12a1 1 0 017a2h-12a2 4a2 4.42A2.5a2 6a2.94l.64 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-600 mb-1">July 14, 2020</p>
+                                <p class="text-lg font-semibold text-gray-900 mb-2">Warm welcome to our new group member, Yue Xin, Jingwei Long, Jie Ren.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Contact</h3>
+                    <div class="flex items-start text-gray-300">
+                        <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a1 1 0 010-1.414 1.414l1.41 1 017a2h-12a2 4a2 4.42A2.5a2 6a2.94L6 4.42A2.5a2 6a2.94z"/>
+                        </svg>
+                        <span>393 Middle Huaxia Road, Pudong, Shanghai, 201210<br>(School of Information Science and Technology, ShanghaiTech University)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Email</h3>
+                    <div class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997A2 5.884L2.003 5.884z"/>
+                        </svg>
+                        <a href="mailto:zzfmvp@gmail.com" class="hover:text-primary-400 transition">zzfmvp@gmail.com</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-primary-400 mb-4">Connect</h3>
+                    <div class="space-y-2">
+                        <a href="https://scholar.google.com.sg/citations?user=r5tFJ0YAAAAJ" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">Google Scholar</a>
+                        <a href="https://orcid.org/0000-0002-8193-7422" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">ORCID</a>
+                        <a href="https://www.linkedin.com/in/zhu-zhifeng-55221a62/" target="_blank" rel="noopener" class="block text-gray-300 hover:text-primary-400 transition">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-800 text-sm text-gray-400">
+                <p>The website is mainly maintained by Zhengde Xu (2021 - present)</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
