@@ -117,3 +117,17 @@ This is a **static website** with no build system:
 - Hosted on GitHub Pages
 - Deploy using gh CLI: `gh repo sync` (or `git push origin master` if gh CLI auth is configured)
 - No CI/CD configured
+
+## Source Code Changes
+
+### 2026-04-27 - Homepage biography refresh
+- Updated `index.html` to replace the English and Chinese biography text for Prof. Zhifeng Zhu with the April 2026 version covering education, ShanghaiTech appointment, research focus, grants, honors, publications, reviewing service, and student outcomes.
+- Updated `.gitignore` to include the required local tool/cache exclusions: `.sisyphus/`, `.ruff_cache/`, and `**/__pycache__/`.
+- Prevention: when updating homepage profile content, search for both `Biography` and `简介` in `index.html`, then verify the bilingual sections remain aligned before considering the content update complete.
+
+## Error Logs
+
+### 2026-04-27 - local browser launch unavailable
+- Error: `xdg-open http://localhost:8000` failed because no supported desktop or terminal browser was installed in the execution environment.
+- Resolution: kept the local `python3 -m http.server 8000` server running and verified the homepage endpoint directly with `curl --noproxy '*' -I http://127.0.0.1:8000`, which returned `200 OK`.
+- Prevention: when browser launch is unavailable in a headless environment, verify the static site through `127.0.0.1` with proxy bypass and provide the local URL for manual browser testing.

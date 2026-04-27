@@ -6,3 +6,6 @@ findings.md
 progress.md
 task_plan.md
 *.backup
+.sisyphus/
+.ruff_cache/
+**/__pycache__/
