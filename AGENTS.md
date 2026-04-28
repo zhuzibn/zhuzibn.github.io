@@ -119,6 +119,26 @@ This is a **static website** with no build system:
 
 ## Source Code Changes
 
+### 2026-04-28 - Research page section jump links
+- Converted the three section names in the `Research Introduction` helper text in `research.html` into in-page links for `Summary of Research`, `Journal Papers`, and `Conference Papers`.
+- Added stable section anchors with scroll offsets so clicking each link jumps to the matching section without hiding the heading under the sticky navigation bar.
+- Prevention: when adding in-page navigation, update both the header links and the target section IDs together, then verify each anchor exists exactly once.
+
+### 2026-04-28 - Research page section guide
+- Added a short page-header guide under `Research Introduction` in `research.html` stating that the page contains "Summary of Research", "Journal Papers", and "Conference Papers".
+- Kept the existing research summary, journal paper list, and conference paper list unchanged.
+- Prevention: when adjusting research-page header copy, verify the visible heading and helper text match the requested wording without changing section content below.
+
+### 2026-04-28 - Research page header cleanup
+- Removed the page-header sentence and PDF link reading "A brief introduction of our current research can be found here" from `research.html`.
+- Kept the `Research Introduction` heading and the main research summary/publication sections unchanged.
+- Prevention: when removing header helper text, search for the visible phrase in the target HTML file and verify only the requested paragraph/link is removed.
+
+### 2026-04-28 - Research page Bio_Research_teaching refresh
+- Updated the `Summary of Research` section in `research.html` to follow the research section from `Bio_Research_teaching.docx`, including the open-source GitHub sentence and collaborative "our/we" voice.
+- Preserved the existing Tailwind card layout, publication list, typography conventions, underline emphasis, italics, bold journal metadata, subscripts, and external-link behavior.
+- Prevention: when refreshing page text from a Word source, extract the `.docx` content first and compare it against the existing HTML summary so wording, emphasis, and source links are not accidentally dropped.
+
 ### 2026-04-28 - Candidate statement research and teaching sections
 - Added a `Summary of Research` section near the top of `research.html`, preserving the wording and structure from `6-Candidate's Statement.docx` while converting Word formatting such as underline, italics, bold, and subscripts into HTML.
 - Added a `Summary of Teaching` section near the top of `Teaching.html`, preserving the wording from `6-Candidate's Statement.docx` and rendering Table I as a responsive HTML table.
@@ -137,6 +157,11 @@ This is a **static website** with no build system:
 - Prevention: when updating homepage profile content, search for both `Biography` and `简介` in `index.html`, then verify the bilingual sections remain aligned before considering the content update complete.
 
 ## Error Logs
+
+### 2026-04-28 - Git metadata writes blocked by sandbox
+- Error: `git update-index --chmod=-x research.html AGENTS.md`, `git config core.filemode false`, and `git restore --staged research.html AGENTS.md` initially failed when the sandbox could not create temporary files or lock files under `.git`, reporting a read-only filesystem.
+- Resolution: reran the required Git metadata operations with approved escalation, disabled local file-mode tracking for the WSL/OneDrive workspace, and unstaged the files so only working-tree content changes remain.
+- Prevention: when Git reports mode-only changes on this Windows-mounted repository, confirm `core.filemode=false` before editing index metadata, and use approved escalation for `.git` metadata writes if the sandbox blocks lock-file creation.
 
 ### 2026-04-27 - local browser launch unavailable
 - Error: `xdg-open http://localhost:8000` failed because no supported desktop or terminal browser was installed in the execution environment.
