@@ -119,6 +119,16 @@ This is a **static website** with no build system:
 
 ## Source Code Changes
 
+### 2026-04-28 - Homepage maintainer attribution update
+- Replaced the old homepage maintainer sentence with a dated maintainer history for Zhifeng, Jie Ren, and Zhengde Xu.
+- Removed the duplicated maintainer attribution from the other static page footers so the maintainer history displays only on `index.html`.
+- Prevention: when editing footer-only attribution text, search all HTML pages for the exact visible sentence and verify the retained copy appears only on the intended page.
+
+### 2026-04-28 - ShanghaiTech email addition
+- Updated every visible occurrence of `zzfmvp@gmail.com` across the nine static HTML pages to also show `zhuzhf@shanghaitech.edu.cn`.
+- Updated matching `mailto:` links so email contact links address both `zzfmvp@gmail.com` and `zhuzhf@shanghaitech.edu.cn`.
+- Prevention: when changing site-wide contact information, search all HTML files for both visible email text and `mailto:` attributes so header, footer, and profile-card contact details remain consistent.
+
 ### 2026-04-28 - Research page section jump links
 - Converted the three section names in the `Research Introduction` helper text in `research.html` into in-page links for `Summary of Research`, `Journal Papers`, and `Conference Papers`.
 - Added stable section anchors with scroll offsets so clicking each link jumps to the matching section without hiding the heading under the sticky navigation bar.
