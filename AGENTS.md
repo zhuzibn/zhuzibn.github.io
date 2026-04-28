@@ -115,10 +115,15 @@ This is a **static website** with no build system:
 
 - Repository: `zhuzibn/zhuzibn.github.io`
 - Hosted on GitHub Pages
-- Deploy using gh CLI: `gh repo sync` (or `git push origin master` if gh CLI auth is configured)
 - No CI/CD configured
 
 ## Source Code Changes
+
+### 2026-04-28 - Gallery group photo additions
+- Updated `Gallery.html` to show the 2025, 2024, and 2020 group photos in the gallery grid, keeping the newest photos first and preserving the existing card layout.
+- Added `assets/img/groupphoto2020.jpg` and `assets/img/groupphoto2024.jpg` from the OneDrive website photo folder; reused the existing `assets/img/groupphoto2025.jpg` because it matched the provided `2025.jpg` exactly.
+- Removed a stray `Labmanual.html` navigation link that had been accidentally rendered inside the gallery content area.
+- Prevention: when adding gallery photos, compare provided source images against existing `assets/img/groupphotoYYYY.*` files first, then verify the gallery grid contains only photo cards and no copied navigation fragments before finishing.
 
 ### 2026-04-27 - Homepage biography refresh
 - Updated `index.html` to replace the English and Chinese biography text for Prof. Zhifeng Zhu with the April 2026 version covering education, ShanghaiTech appointment, research focus, grants, honors, publications, reviewing service, and student outcomes.
