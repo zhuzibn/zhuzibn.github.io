@@ -119,6 +119,12 @@ This is a **static website** with no build system:
 
 ## Source Code Changes
 
+### 2026-04-28 - Candidate statement research and teaching sections
+- Added a `Summary of Research` section near the top of `research.html`, preserving the wording and structure from `6-Candidate's Statement.docx` while converting Word formatting such as underline, italics, bold, and subscripts into HTML.
+- Added a `Summary of Teaching` section near the top of `Teaching.html`, preserving the wording from `6-Candidate's Statement.docx` and rendering Table I as a responsive HTML table.
+- Kept existing publication entries, thesis links, and course-material cards intact so the new statement-derived content supplements the current pages without changing established navigation or resource links.
+- Prevention: when incorporating statement or CV content into public pages, confirm whether the request calls for exact wording or a page-level summary before editing, then verify that existing publication formatting and course-resource links remain unchanged.
+
 ### 2026-04-28 - Gallery group photo additions
 - Updated `Gallery.html` to show the 2025, 2024, and 2020 group photos in the gallery grid, keeping the newest photos first and preserving the existing card layout.
 - Added `assets/img/groupphoto2020.jpg` and `assets/img/groupphoto2024.jpg` from the OneDrive website photo folder; reused the existing `assets/img/groupphoto2025.jpg` because it matched the provided `2025.jpg` exactly.
