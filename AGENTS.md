@@ -119,6 +119,16 @@ This is a **static website** with no build system:
 
 ## Source Code Changes
 
+### 2026-05-23 - Awards graduate section ordering update
+- Moved the `Outstanding Graduate of Shanghai` section before `Outstanding Graduate of ShanghaiTech University` in `Awards.html`.
+- Updated the ShanghaiTech University outstanding graduate label to `上海科技大学优秀毕业生Top 10%`.
+- Prevention: when adding related award categories, check their display order against the requested hierarchy and verify percentage labels in both English-adjacent and Chinese text before finishing.
+
+### 2026-05-23 - Awards Shanghai outstanding graduate section
+- Added a new `Outstanding Graduate of Shanghai` section to `Awards.html` with the Chinese label `上海市优秀毕业生Top3.5%`.
+- Added the 2026.05 award entry for Zhengde Xu as a PhD student.
+- Prevention: when adding a new award category, place it near related award sections and preserve the existing dated-row layout so awards remain visually consistent.
+
 ### 2026-04-28 - Homepage maintainer attribution update
 - Replaced the old homepage maintainer sentence with a dated maintainer history for Zhifeng, Jie Ren, and Zhengde Xu.
 - Removed the duplicated maintainer attribution from the other static page footers so the maintainer history displays only on `index.html`.
