@@ -54,7 +54,7 @@ All pages use Tailwind CSS with the following shared components:
 ### Navigation Structure
 
 All pages link to each other via the main navbar. The navigation structure is:
-- Home → Research → Group → Teaching → Labmanual → News → Invited Talk → Awards → Gallery
+- Home → Research → Group → News → Awards → Teaching → Labmanual → Gallery
 
 ### Content Patterns
 
@@ -119,6 +119,16 @@ This is a **static website** with no build system:
 
 ## Source Code Changes
 
+### 2026-05-23 - Talks navigation removal
+- Removed the `Talks` navigation item linking to `Invited Talk.html` from the desktop and mobile navbars across all static HTML pages.
+- Updated the documented navbar structure in `AGENTS.md` so it no longer lists `Invited Talk`.
+- Prevention: when removing a navigation item, search all HTML pages for both the visible label and target filename so desktop, mobile, and accidental content-area copies are removed together.
+
+### 2026-05-23 - Talks Markdown export
+- Added `Talks.md` with the visible invited-talk entries from `Invited Talk.html`, organized by year.
+- Omitted lecture image attachment links and kept only the talk dates, speakers, affiliations, and lecture titles as plain Markdown text.
+- Prevention: when exporting page content to Markdown, strip asset links and navigation fragments unless the request explicitly asks to preserve attachments or page chrome.
+
 ### 2026-05-23 - Awards graduate section ordering update
 - Moved the `Outstanding Graduate of Shanghai` section before `Outstanding Graduate of ShanghaiTech University` in `Awards.html`.
 - Updated the ShanghaiTech University outstanding graduate label to `上海科技大学优秀毕业生Top 10%`.
@@ -177,6 +187,11 @@ This is a **static website** with no build system:
 - Prevention: when updating homepage profile content, search for both `Biography` and `简介` in `index.html`, then verify the bilingual sections remain aligned before considering the content update complete.
 
 ## Error Logs
+
+### 2026-05-23 - local server not running during navbar verification
+- Error: `curl --noproxy '*' -I http://127.0.0.1:8000/index.html` failed with connection refused because the previous local static server was no longer running.
+- Resolution: restarted the static server with `python3 -m http.server 8000` from the repository root and verified `index.html` returned `200 OK`.
+- Prevention: before verifying static pages through `127.0.0.1:8000`, check whether the local server is still running or restart it from the repository root.
 
 ### 2026-04-28 - Git metadata writes blocked by sandbox
 - Error: `git update-index --chmod=-x research.html AGENTS.md`, `git config core.filemode false`, and `git restore --staged research.html AGENTS.md` initially failed when the sandbox could not create temporary files or lock files under `.git`, reporting a read-only filesystem.
