@@ -9,3 +9,6 @@ task_plan.md
 .sisyphus/
 .ruff_cache/
 **/__pycache__/
+.codex
+Bio_Research_teaching.docx
+others.md
