@@ -6,7 +6,7 @@ This is the **COSMAL (Computational spintronics and magnetism Lab)** website - a
 
 **Technology Stack:**
 - Pure HTML5, CSS3, and Vanilla JavaScript
-- **All pages (9/9)**: Tailwind CSS via CDN with custom design system
+- **All published pages (8/8)**: Tailwind CSS via CDN with custom design system
 - Custom color palette: Green accent (#22c55e) with design tokens
 - Typography: Inter (English) + Noto Sans SC (Chinese)
 - FontAwesome icons
@@ -14,13 +14,13 @@ This is the **COSMAL (Computational spintronics and magnetism Lab)** website - a
 
 **Modernization Status:**
 The site modernization is complete. As of Feb 2025:
-- ✅ **All pages modernized (Tailwind)**: index, research, Group, Awards, News, Teaching, Labmanual, Invited Talk, Gallery
+- ✅ **All published pages modernized (Tailwind)**: index, research, Group, Awards, News, Teaching, Labmanual, Gallery
 - See `MODERNIZATION-SUMMARY.md` for details on the modernization project
 
 ## File Structure
 
 ```
-/                           # Root - 9 HTML pages
+/                           # Root - 8 published HTML pages
 ├── *.html                  # All main pages (index, research, Group, News, etc.)
 ├── assets/
 │   ├── css/               # FontAwesome, custom styles, templatemo.css
@@ -36,7 +36,6 @@ The site modernization is complete. As of Feb 2025:
 - `News.html` - Lab news and updates
 - `Teaching.html` - Course information
 - `Labmanual.html` - Lab manual and protocols
-- `Invited Talk.html` - Invited talks and presentations
 - `Awards.html` - Awards received by lab members
 - `Gallery.html` - Photo gallery
 
@@ -118,6 +117,11 @@ This is a **static website** with no build system:
 - No CI/CD configured
 
 ## Source Code Changes
+
+### 2026-09-10 - Invited Talk page untracked
+- Added `Invited Talk.html` to `.gitignore` and removed it from Git tracking because the page is no longer published online.
+- Kept the local file intact; the published site now consists of the eight maintained HTML pages listed above.
+- Prevention: when retiring a local-only page, remove it from Git tracking and update the documented published-page inventory together.
 
 ### 2026-05-23 - Talks navigation removal
 - Removed the `Talks` navigation item linking to `Invited Talk.html` from the desktop and mobile navbars across all static HTML pages.
